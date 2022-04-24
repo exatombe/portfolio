@@ -26,7 +26,7 @@ jobs:
       - name: Install packages
         run: npm ci
       - name: Installing dependencies
-        run: npm i @next/swc-linux-x64-gnu @next/swc-linux-x64-gnux32 @next/swc-linux-x64-musl
+        run: npm i @next/swc-linux-x64-gnu @next/swc-linux-x64-musl
       - name: Build project
         run: npm run build
       - name: Export static files

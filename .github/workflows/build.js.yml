@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
 
     strategy:
@@ -24,13 +24,15 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install packages
-        run: npm ci
+        run: npm i
       - name: Build project
         run: npm run build
       - name: Export static files
         run: npm run export
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
+      - name: Install rsync 📚
+        run: apt-get update && apt-get install -y rsync
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:

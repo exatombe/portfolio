@@ -62,7 +62,10 @@ export default function Home() {
   }, [isLoading]);
   if (isLoading) {
     return (
+      <div>
+      <HeadComponent title={"Jeremy Soler"} description={"Jeremy Soler, Mobile and Web App develope. Ask me everyting via email : contact@jeremysoler.com"} />
       <Loader />
+      </div>
     )
   } else {
     return (

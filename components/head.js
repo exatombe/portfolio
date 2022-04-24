@@ -4,7 +4,7 @@ export default function HeadComponent({ title, description}){
     return (
         <Head>
            <title>{title}</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content={description} />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -23,7 +23,7 @@ export default function HeadComponent({ title, description}){
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content= {description} />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4" />
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#1a1a1a"/>

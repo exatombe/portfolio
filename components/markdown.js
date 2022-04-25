@@ -1,14 +1,11 @@
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Link from "@mui/material/Link";
+import Link from "next/link";
+import { Link as MuiLink, Paper, TableRow, TableHead, TableContainer, TableCell, Table, TableBody} from "@mui/material";
 import ReactMarkdown from 'react-markdown';
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
+import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
 
 export default function Markdown({md}) {
   return (
@@ -24,6 +21,7 @@ export default function Markdown({md}) {
             children={String(children).replace(/\n$/, '')}
             language={match[1]}
             PreTag="div"
+            style={materialDark}
             {...props}
           />
         ) : (
@@ -32,13 +30,13 @@ export default function Markdown({md}) {
           </code>
         )
       },
-        table: (props) => (<TableContainer> <Table {...props} /> </TableContainer>),
+        table: (props) => (<TableContainer component={Paper}> <Table sx={{ minWidth: 650 }} aria-label="simple table" {...props} /> </TableContainer>),
         thead: TableHead,
         tbody: TableBody,
         tr: TableRow,
         th: TableCell,
         td: TableCell,
-        a: (props) => <Link {...props} />,        
+        a: (props) => <Link href={props.href} passHref><MuiLink>{props.children}</MuiLink></Link>,        
     }}
   />
   );

@@ -1,31 +1,45 @@
-## A propos de moi
+# A propos de moi
 
-Maintenant que tout fonctionne.
+## Somaire
 
-| Language | Liens |
-| --- | --- |
-| [HTML](https://fr.wikipedia.org/wiki/HTML) | [HTML5](https://fr.wikipedia.org/wiki/HTML5) |
-| [CSS](https://fr.wikipedia.org/wiki/CSS) | [CSS3](https://fr.wikipedia.org/wiki/CSS3) |
-| [JavaScript](https://fr.wikipedia.org/wiki/JavaScript) | [ES6](https://fr.wikipedia.org/wiki/ECMAScript) |
+- [Résumé de ma formation](#resume)
+- [Mes compétences](#competences)
+
+## Résumé
+<div id="resume">
+<p>
+Je suis étudiant en BTS SIO option SLAM à l'école INSTA. Je suis actuellement alternant à l'entreprise Aprentiv'.
+Mon cursus est de 2 ans (jusqu'en 2023).
+A terme j'aurais apris les languages suivants :
+</p>
+</div>
+
+| Année scolaires | Langages |
+|:----------------|:--------|
+| 2022 | HTML/CSS/JS/PHP/SQL/Python |
+| 2023 | Java/C# |
+
+## Mes compétences
+<div id="competences">
+<p>Chose à noté, j'ai appris en auto-didacte pendant 2 ans à apprendre les languages suivants :</p>
+</div>
+
+| Année | Langages |
+|:------|:--------|
+| 2020 | HTML/CSS/JS/PHP/SQL |
+| 2021 | Javascript avec NodeJs |
+
+> J'évalue mes compétences dans ces languages plus que sufisantes. Voir supérieur à mon niveau d'étude.
+
+En plus d'apprendre ces languages, j'ai pu apprendre en auto-didacte à utiliser les frameworks suivants, voici un tableau vous résumant les framework appris ainsi que le niveau estimé de ma connaissance :
+
+| Framework | Langage | Niveau |
+|:---------|:--------|:-------|
+| React | Javascript | Avancé |
+| React-Native | Javascript | Avancé |
+| NextJs | Javascript | Moyen |
+| Symfony | PHP | Moyen |
 
 Afin d'hébérger mon site, j'utilise Github Pages.
 
 [Github Pages](https://pages.github.com/)
-
-Le contenu de mon site est généré automatiquement à partir d'un fichier markdown.
-
-<div>
-    <p>
-        Test avec de l'html
-    </p>
-    <p>
-        <strong>
-            Test avec du texte en gras
-        </strong>
-    </p>
-    <p>
-        <em>
-            Test avec du texte en italique
-        </em>
-    </p>
-</div>

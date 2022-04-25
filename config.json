@@ -1,0 +1,27 @@
+{
+    "root": "./global/index.md",
+    "skills":{
+        "range": [{
+            "name": "HTML",
+            "level": "90"
+        }, {
+            "name": "CSS",
+            "level": "45"
+        }, {
+            "name": "JavaScript",
+            "level": "70"
+        },{
+            "name": "React",
+            "level": "70"
+        },{
+            "name": "PHP",
+            "level": "80"
+        }],
+        "languages": ["HTML", "CSS", "JavaScript", "React", "PHP"],
+        "frameworks": ["React", "Symfony", "Bootstrap", "jQuery", "React-native"],
+        "database": ["MySQL", "Firebase"]
+    },
+    "posts": {
+        "root": "/global/posts/"
+    }
+}

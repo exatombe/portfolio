@@ -5,16 +5,30 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import HeadComponent from '../components/head';
-import Loader from '../components/loader';
 import styles from '../styles/Home.module.css';
 import detectBrowserLanguage from 'detect-browser-language';
+import Markdown from '../components/markdown';
+import config from '../config.json';
+import fs from 'fs';
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
   },
 });
+
+
+export function getStaticProps(context) {
+
+  const home = fs.readFileSync(config.root, 'utf8');
+  return {
+    props: {
+      home,
+    }, // will be passed to the page component as props
+  }
+}
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -28,7 +42,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <Markdown md={children} />
         </Box>
       )}
     </div>
@@ -48,26 +62,23 @@ function a11yProps(index) {
   };
 }
 
-
-export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+export default function Home(props) {
+  console.log(props);
   const [value, setValue] = useState(0);
+  const [presentation, setPresentation] = useState({
+    subtitle: 'Développeur Web et Mobile',
+    menus: {
+      about:"A propos",
+      contact:"Contact",
+      posts:"Articles",
+    }
+  });
+
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-  }, [isLoading]);
-  if (isLoading) {
-    return (
-      <div>
-      <HeadComponent title={"Jeremy Soler"} description={"Jeremy Soler, Mobile and Web App develope. Ask me everyting via email : contact@jeremysoler.com"} />
-      <Loader />
-      </div>
-    )
-  } else {
+  
     return (
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
@@ -78,7 +89,7 @@ export default function Home() {
             <h1 className={styles.title}>
               Jeremy Soler 
             </h1>
-            <span className={styles.subtitle}>Mobile and Web App developer</span>
+            <span className={styles.subtitle}>{ presentation.subtitle }</span>
             <p className={styles.description}>
               
             </p>
@@ -86,13 +97,13 @@ export default function Home() {
             <Box sx={{ width: '100%' }}>
               <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} centered aria-label="basic tabs example">
-                  <Tab label={ detectBrowserLanguage().startsWith('fr') ? "A propos" : "About"  }    {...a11yProps(0)} />
-                  <Tab label={detectBrowserLanguage().startsWith('fr') ? "Articles" : "Posts"} {...a11yProps(1)} />
-                  <Tab label={detectBrowserLanguage().startsWith('fr') ? "Contactez moi" : "Contact me"} {...a11yProps(2)} />
+                  <Tab label={presentation.menus.about}    {...a11yProps(0)} />
+                  <Tab label={presentation.menus.posts} {...a11yProps(1)} />
+                  <Tab label={presentation.menus.contact} {...a11yProps(2)} />
                 </Tabs>
               </Box>
               <TabPanel value={value} index={0}>
-                Item One
+                {props.home}
               </TabPanel>
               <TabPanel value={value} index={1}>
                 Item Two
@@ -109,5 +120,4 @@ export default function Home() {
         </div>
       </ThemeProvider>
     )
-  }
 }

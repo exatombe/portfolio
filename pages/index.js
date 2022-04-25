@@ -1,4 +1,4 @@
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -40,7 +40,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Markdown md={children} />
+          <div>{children}</div>
         </Box>
       )}
     </div>
@@ -101,13 +101,13 @@ export default function Home(props) {
                 </Tabs>
               </Box>
               <TabPanel value={value} index={0}>
-                {props.home}
+              <Markdown md={props.home} />
               </TabPanel>
               <TabPanel value={value} index={1}>
-                Item Two
+                <Typography>Posts Lists</Typography>
               </TabPanel>
               <TabPanel value={value} index={2}>
-                Item Three
+                <Typography>Info to contact me</Typography>
               </TabPanel>
             </Box>
           </main>

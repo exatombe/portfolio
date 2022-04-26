@@ -1,7 +1,7 @@
 import { CssBaseline } from '@mui/material';
 import { Box, Button } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import HeadComponent from '../components/head';
 import styles from '../styles/Home.module.css';
 import Markdown from '../components/markdown';
@@ -40,10 +40,14 @@ export function getStaticProps(context) {
 }
 
 export default function Home(props) {
+    const [isSSR, setIsSSR] = useState(true);
+    useEffect(() => {
+        setIsSSR(false);
+    }, []);
     return (
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
-            <div className={styles.container} suppressHydrationWarning={true}>
+            {!isSSR &&  <div className={styles.container} suppressHydrationWarning={true}>
                 <HeadComponent title={props.postJSON.title} description={props.postJSON.description} />
 
                 <main className={styles.main}>
@@ -67,7 +71,7 @@ export default function Home(props) {
                 <footer className={styles.footer}>
                     <p >Site made with <a href="https://nextjs.org/">Next.js</a> and <a href="https://mui.com">Material-UI</a> by Jeremy Soler</p>
                 </footer>
-            </div>
+            </div> }
         </ThemeProvider>
     )
 }

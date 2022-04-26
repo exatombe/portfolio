@@ -4,7 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import HeadComponent from '../components/head';
 import styles from '../styles/Home.module.css';
 import Markdown from '../components/markdown';
@@ -84,10 +84,13 @@ function a11yProps(index) {
 
 export default function Home(props) {
   const [value, setValue] = useState(0);
-
+  const [isSSR, setIsSSR] = useState(true);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  useEffect(() => {
+    setIsSSR(false);
+  }, []);
   
     return (
       <ThemeProvider theme={darkTheme}>
@@ -113,14 +116,12 @@ export default function Home(props) {
                 </Tabs>
               </Box>
               <TabPanel value={value} index={0}>
-                <div>
-                  <Markdown md={props.home} />
-                </div>
+                 {!isSSR && <Markdown md={props.home} /> }
               </TabPanel>
               <TabPanel value={value} index={1}>
                 { props.posts.map((post, index) => (
                   <div key={index}>
-                    <CardComponent title={post.title} description={post.description} image={post.image} link={post.link} />
+                     {!isSSR && <CardComponent title={post.title} description={post.description} image={post.image} link={post.link} /> }
                   </div>
                 ))}
               </TabPanel>

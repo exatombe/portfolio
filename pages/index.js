@@ -8,7 +8,9 @@ import { useState } from 'react';
 import HeadComponent from '../components/head';
 import styles from '../styles/Home.module.css';
 import Markdown from '../components/markdown';
+import CardComponent from '../components/card';
 import config from '../config.json';
+
 import fs from 'fs';
 const darkTheme = createTheme({
   palette: {
@@ -18,11 +20,31 @@ const darkTheme = createTheme({
 
 
 export function getStaticProps(context) {
+  function readDirAndDisplay(dir) {
+    const files = fs.readdirSync(dir);
+    return files.map(file => {
+      const filePath = `${dir}/${file}`;
+      const stat = fs.statSync(filePath);
+      if (stat.isDirectory()) {
+        return readDirAndDisplay(filePath);
+      } else {
+        return filePath;
+      }
+    });
+  }
 
-  const home = fs.readFileSync(config.root, 'utf8');
+  const files = readDirAndDisplay(config.posts.root);
+  function getFileContent(file) {
+    return fs.readFileSync(file, 'utf-8');
+  }
+  const home = getFileContent(config.root);
+  const posts = files.map(file => {
+      return JSON.parse(getFileContent(file));
+  });
   return {
     props: {
       home,
+      posts
     }, // will be passed to the page component as props
   }
 }
@@ -61,7 +83,6 @@ function a11yProps(index) {
 }
 
 export default function Home(props) {
-  console.log(props);
   const [value, setValue] = useState(0);
   const [presentation, setPresentation] = useState({
     subtitle: 'Développeur Web et Mobile',
@@ -104,7 +125,11 @@ export default function Home(props) {
               <Markdown md={props.home} />
               </TabPanel>
               <TabPanel value={value} index={1}>
-                <Typography>Posts Lists</Typography>
+                { props.posts.map((post, index) => (
+                  <div key={index}>
+                    <CardComponent title={post.title} description={post.description} image={post.image} link={post.link} />
+                  </div>
+                ))}
               </TabPanel>
               <TabPanel value={value} index={2}>
                 <Typography>Info to contact me</Typography>

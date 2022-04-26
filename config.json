@@ -22,6 +22,11 @@
         "database": ["MySQL", "Firebase"]
     },
     "posts": {
-        "root": "/global/posts/"
+        "root": "./global/posts/jsons"
+    },
+    "contact": {
+        "email": "contact@jeremysoler.com",
+        "github": "https://github.com/garder500",
+        "linkedin": "https://www.linkedin.com/in/jeremy-soler-1b34b0200/"
     }
 }

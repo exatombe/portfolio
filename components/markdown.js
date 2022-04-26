@@ -30,7 +30,7 @@ export default function Markdown({md}) {
           </code>
         )
       },
-        table: (props) => (<TableContainer component={Paper}> <Table sx={{ minWidth: 650 }} aria-label="simple table" {...props} /> </TableContainer>),
+        table: (props) => (<TableContainer component={Paper} sx={{maxWidth:"max-content"}}> <Table sx={{ minWidth:"400px"}} aria-label="simple table" {...props} /> </TableContainer>),
         thead: TableHead,
         tbody: TableBody,
         tr: TableRow,

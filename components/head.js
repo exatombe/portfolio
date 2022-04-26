@@ -23,7 +23,7 @@ export default function HeadComponent({ title, description}){
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content= {description} />
         <meta name="twitter:image" content="/favicon.ico" />
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta httpEquiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4" />
         <meta name="robots" content="index, follow" />

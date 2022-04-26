@@ -34,7 +34,7 @@ export default function Markdown({md}) {
         thead: TableHead,
         tbody: TableBody,
         tr: TableRow,
-        th: TableCell,
+        th: (props) => (<TableCell sx={{fontWeight: "bold"}} {...props} />),
         td: TableCell,
         a: (props) => <Link href={props.href} passHref><MuiLink>{props.children}</MuiLink></Link>,        
     }}

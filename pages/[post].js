@@ -40,13 +40,6 @@ export function getStaticProps(context) {
 }
 
 export default function Home(props) {
-    const [value, setValue] = useState(0);
-    const [presentation, setPresentation] = useState({
-        subtitle: 'Développeur Web et Mobile'
-    });
-
-
-
     return (
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
@@ -57,7 +50,7 @@ export default function Home(props) {
                     <h1 className={styles.title}>
                         Jeremy Soler
                     </h1>
-                    <span className={styles.subtitle}>{presentation.subtitle}</span>
+                    <span className={styles.subtitle}>Développeur Web et Mobile</span>
                     <div className={styles.description}>
                         <Link href="/" passHref>
                             <Button variant="contained" color="primary">

@@ -84,15 +84,6 @@ function a11yProps(index) {
 
 export default function Home(props) {
   const [value, setValue] = useState(0);
-  const [presentation, setPresentation] = useState({
-    subtitle: 'Développeur Web et Mobile',
-    menus: {
-      about:"A propos",
-      contact:"Contact",
-      posts:"Articles",
-    }
-  });
-
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -108,7 +99,7 @@ export default function Home(props) {
             <h1 className={styles.title}>
               Jeremy Soler 
             </h1>
-            <span className={styles.subtitle}>{ presentation.subtitle }</span>
+            <span className={styles.subtitle}>Développeur Web et Mobile</span>
             <p className={styles.description}>
               
             </p>
@@ -116,13 +107,15 @@ export default function Home(props) {
             <Box sx={{ width: '100%' }}>
               <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} centered aria-label="basic tabs example">
-                  <Tab label={presentation.menus.about}    {...a11yProps(0)} />
-                  <Tab label={presentation.menus.posts} {...a11yProps(1)} />
-                  <Tab label={presentation.menus.contact} {...a11yProps(2)} />
+                  <Tab label={"A propos"}    {...a11yProps(0)} />
+                  <Tab label={"Contact"} {...a11yProps(1)} />
+                  <Tab label={"Articles"} {...a11yProps(2)} />
                 </Tabs>
               </Box>
               <TabPanel value={value} index={0}>
-              <Markdown md={props.home} />
+                <div>
+                  <Markdown md={props.home} />
+                </div>
               </TabPanel>
               <TabPanel value={value} index={1}>
                 { props.posts.map((post, index) => (

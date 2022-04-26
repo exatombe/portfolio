@@ -8,9 +8,9 @@ export default function HeadComponent({ title, description}){
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content={description} />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="application-name" content={title} />
+        <meta name="application-name" content="Jeremy SOler" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-title" content={title} />
+        <meta name="apple-mobile-web-app-title" content="Jeremy Soler" />
         <meta property="og:title" content={title} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={title} />

@@ -30,9 +30,11 @@ export function getStaticProps(context) {
         return fs.readFileSync(file, 'utf-8');
     }
     const post = getFileContent("./global/posts/" + context.params.post + ".md");
+    const postJSON = JSON.parse(getFileContent("./global/posts/jsons/" + context.params.post + ".json"));
     return {
         props: {
-            post
+            post,
+            postJSON
         }, // will be passed to the page component as props
     }
 }
@@ -49,7 +51,7 @@ export default function Home(props) {
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
             <div className={styles.container}>
-                <HeadComponent title={"Jeremy Soler"} description={"Jeremy Soler, Mobile and Web App develope. Ask me everyting via email : contact@jeremysoler.com"} />
+                <HeadComponent title={props.postJSON.title} description={props.postJSON.description} />
 
                 <main className={styles.main}>
                     <h1 className={styles.title}>

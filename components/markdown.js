@@ -30,13 +30,13 @@ export default function Markdown({md}) {
           </code>
         )
       },
-        table: (props) => (<TableContainer component={Paper} sx={{maxWidth:"max-content"}}> <Table sx={{ minWidth:"400px"}} aria-label="simple table" {...props} /> </TableContainer>),
-        thead: TableHead,
-        tbody: TableBody,
-        tr: TableRow,
-        th: (props) => (<TableCell sx={{fontWeight: "bold"}} {...props} />),
-        td: TableCell,
-        a: (props) => <Link href={props.href} passHref><MuiLink>{props.children}</MuiLink></Link>,        
+        table: ({ children, ...props}) => (<TableContainer component={Paper} sx={{maxWidth:"max-content"}}> <Table sx={{ minWidth:"400px"}} aria-label="simple table" >{children}</Table></TableContainer>),
+        thead: ({ children, ...props}) => (<TableHead >{children}</TableHead>),
+        tbody: ({ children, ...props}) => (<TableBody >{children}</TableBody>),
+        tr: ({children, ...props}) => (<TableRow >{children}</TableRow>),
+        th: ({children, ...props}) => (<TableCell sx={{fontWeight: "bold"}}> {children} </TableCell>),
+        td: ({ children, ...props}) => (<TableCell >{children}</TableCell>),
+        a: ({ children, ...props}) => <Link href={props.href} passHref><MuiLink>{children}</MuiLink></Link>,        
     }}
   />
   );

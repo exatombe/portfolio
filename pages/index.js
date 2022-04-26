@@ -92,10 +92,10 @@ export default function Home(props) {
     return (
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <div className={styles.container}>
+        <div className={styles.container} suppressHydrationWarning={true}>
           <HeadComponent title={"Jeremy Soler"} description={"Jeremy Soler, Mobile and Web App develope. Ask me everyting via email : contact@jeremysoler.com"} />
 
-          <main className={styles.main}>
+          <main className={styles.main} >
             <h1 className={styles.title}>
               Jeremy Soler 
             </h1>

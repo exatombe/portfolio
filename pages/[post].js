@@ -43,7 +43,7 @@ export default function Home(props) {
     return (
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
-            <div className={styles.container}>
+            <div className={styles.container} suppressHydrationWarning={true}>
                 <HeadComponent title={props.postJSON.title} description={props.postJSON.description} />
 
                 <main className={styles.main}>

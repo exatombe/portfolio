@@ -108,8 +108,8 @@ export default function Home(props) {
               <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} centered aria-label="basic tabs example">
                   <Tab label={"A propos"}    {...a11yProps(0)} />
-                  <Tab label={"Contact"} {...a11yProps(1)} />
-                  <Tab label={"Articles"} {...a11yProps(2)} />
+                  <Tab label={"Articles"} {...a11yProps(1)} />
+                  <Tab label={"Contact"} {...a11yProps(2)} />
                 </Tabs>
               </Box>
               <TabPanel value={value} index={0}>

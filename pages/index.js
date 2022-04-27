@@ -1,10 +1,8 @@
-import { CssBaseline, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
+import { CssBaseline, Typography, Tabs, Tab, Box, Link as MuiLink } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import styles from '../styles/Home.module.css';
 import config from '../config.json';
@@ -130,7 +128,7 @@ export default function Home(props) {
           </main>
 
           <footer className={styles.footer}>
-            <p >Site made with <a href="https://nextjs.org/">Next.js</a> and <a href="https://mui.com">Material-UI</a> by Jeremy Soler</p>
+          <p >Site made with <Link href="https://nextjs.org/"  passHref><MuiLink target="_blank">Next.js</MuiLink></Link> and <Link href="https://mui.com" passHref ><MuiLink target="_blank">Material-UI</MuiLink></Link> by Jeremy Soler</p>
           </footer>
         </div>
       </ThemeProvider>

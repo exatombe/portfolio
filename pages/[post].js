@@ -66,7 +66,7 @@ export default function Home(props) {
                 </main>
 
                 <footer className={styles.footer}>
-                    <p >Site made with <MuiLink href="https://nextjs.org/">Next.js</MuiLink> and <MuiLink href="https://mui.com">Material-UI</MuiLink> by Jeremy Soler</p>
+                    <p >Site made with Next.js and Material-UI by Jeremy Soler</p>
                 </footer>
             </div>
         </ThemeProvider>

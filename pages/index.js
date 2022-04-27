@@ -128,7 +128,7 @@ export default function Home(props) {
           </main>
 
           <footer className={styles.footer}>
-          <p >Site made with <Link href="https://nextjs.org/"  passHref><a target="_blank">Next.js</a></Link> and <Link href="https://mui.com" passHref ><a target="_blank">Material-UI</a></Link> by Jeremy Soler</p>
+            <p >Site made with Next.js and Material-UI by Jeremy Soler</p>
           </footer>
         </div>
       </ThemeProvider>

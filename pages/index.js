@@ -10,9 +10,9 @@ import styles from '../styles/Home.module.css';
 import config from '../config.json';
 import fs from 'fs';
 
-const HeadComponent = dynamic(() => import('../components/head'));
-const Markdown = dynamic(() => import('../components/markdown'));
-const CardComponent = dynamic(() => import('../components/card'));
+const HeadComponent = dynamic(() => import('../components/head'), { ssr: false });
+const Markdown = dynamic(() => import('../components/markdown'), { ssr: false });
+const CardComponent = dynamic(() => import('../components/card'), { ssr: false });
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
@@ -85,13 +85,10 @@ function a11yProps(index) {
 
 export default function Home(props) {
   const [value, setValue] = useState(0);
-  const [isSSR, setIsSSR] = useState(true);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  useEffect(() => {
-    setIsSSR(false);
-  }, []);
+
   
     return (
       <ThemeProvider theme={darkTheme}>
@@ -117,12 +114,12 @@ export default function Home(props) {
                 </Tabs>
               </Box>
               <TabPanel value={value} index={0}>
-                 {!isSSR && <Markdown md={props.home} /> }
+                <Markdown md={props.home} />
               </TabPanel>
               <TabPanel value={value} index={1}>
                 { props.posts.map((post, index) => (
                   <div key={index}>
-                     {!isSSR && <CardComponent title={post.title} description={post.description} image={post.image} link={post.link} /> }
+                     <CardComponent title={post.title} description={post.description} image={post.image} link={post.link} />
                   </div>
                 ))}
               </TabPanel>

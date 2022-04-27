@@ -1,15 +1,14 @@
 import { CssBaseline } from '@mui/material';
-import { Box, Button, Link as MuiLink } from '@mui/material';œ
+import { Box, Button, Link as MuiLink } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import styles from '../styles/Home.module.css';
 import config from '../config.json';
 import Link from 'next/link';
 import fs from 'fs';
 
-const HeadComponent = dynamic(() => import('../components/head'));
-const Markdown = dynamic(() => import('../components/markdown'));
+const HeadComponent = dynamic(() => import('../components/head'), { ssr: false });
+const Markdown = dynamic(() => import('../components/markdown'), { ssr: false });
 const darkTheme = createTheme({
     palette: {
         mode: 'dark',
@@ -42,14 +41,10 @@ export function getStaticProps(context) {
 }
 
 export default function Home(props) {
-    const [isSSR, setIsSSR] = useState(true);
-    useEffect(() => {
-        setIsSSR(false);
-    }, []);
     return (
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
-            {!isSSR &&  <div className={styles.container} suppressHydrationWarning={true}>
+             <div className={styles.container} suppressHydrationWarning={true}>
                 <HeadComponent title={props.postJSON.title} description={props.postJSON.description} />
 
                 <main className={styles.main}>
@@ -73,7 +68,7 @@ export default function Home(props) {
                 <footer className={styles.footer}>
                     <p >Site made with <MuiLink href="https://nextjs.org/">Next.js</MuiLink> and <MuiLink href="https://mui.com">Material-UI</MuiLink> by Jeremy Soler</p>
                 </footer>
-            </div> }
+            </div>
         </ThemeProvider>
     )
 }

@@ -2,15 +2,14 @@ import PropTypes from 'prop-types';
 import { CssBaseline, Typography, Tabs, Tab, Box } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState } from 'react';
-import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import styles from '../styles/Home.module.css';
 import config from '../config.json';
 import fs from 'fs';
-
-const HeadComponent = dynamic(() => import('../components/head'), { ssr: false });
-const Markdown = dynamic(() => import('../components/markdown'), { ssr: false });
-const CardComponent = dynamic(() => import('../components/card'), { ssr: false });
+import HeadComponent from '../components/head';
+import LoadingSpinner from '../components/loader';
+const Markdown = dynamic(() => import('../components/markdown'), { ssr: false,loading: () => <LoadingSpinner/> });
+const CardComponent = dynamic(() => import('../components/card'), { ssr: false,loading: () => <LoadingSpinner/> });
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',

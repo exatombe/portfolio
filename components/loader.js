@@ -1,10 +1,7 @@
-export default function Loader(){
+export default function LoadingSpinner() {
     return (
-        <div className='animated-loader'>
-            <div className='o'></div>
-            <div className='b'></div>
-            <div className='g'></div>
-            <h1>Loading...</h1>
-        </div>
-    )
-}
+      <div className="spinner-container">
+        <div className="loading-spinner"></div>
+      </div>
+    );
+  }

@@ -6,9 +6,10 @@ import styles from '../styles/Home.module.css';
 import config from '../config.json';
 import Link from 'next/link';
 import fs from 'fs';
+import LoadingSpinner from '../components/loader';
 
 const HeadComponent = dynamic(() => import('../components/head'), { ssr: false });
-const Markdown = dynamic(() => import('../components/markdown'), { ssr: false });
+const Markdown = dynamic(() => import('../components/markdown'), { ssr: false, loading: () => <LoadingSpinner /> });
 const darkTheme = createTheme({
     palette: {
         mode: 'dark',

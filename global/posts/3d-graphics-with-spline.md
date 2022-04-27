@@ -2,7 +2,7 @@
 
 ## Pour bien commencé
 
-> Ce créer un compte sur [spline](https://spline.desig)
+> Ce créer un compte sur **[Spline](https://spline.design)**
 
 Une fois votre compte créer vous pourrez créer un projet
 

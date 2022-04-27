@@ -5,13 +5,14 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
-import HeadComponent from '../components/head';
+import dynamic from 'next/dynamic';
 import styles from '../styles/Home.module.css';
-import Markdown from '../components/markdown';
-import CardComponent from '../components/card';
 import config from '../config.json';
-
 import fs from 'fs';
+
+const HeadComponent = dynamic(() => import('../components/head'));
+const Markdown = dynamic(() => import('../components/markdown'));
+const CardComponent = dynamic(() => import('../components/card'));
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',

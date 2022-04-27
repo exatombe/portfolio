@@ -1,13 +1,15 @@
 import { CssBaseline } from '@mui/material';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Link as MuiLink } from '@mui/material';œ
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
-import HeadComponent from '../components/head';
+import dynamic from 'next/dynamic';
 import styles from '../styles/Home.module.css';
-import Markdown from '../components/markdown';
 import config from '../config.json';
 import Link from 'next/link';
 import fs from 'fs';
+
+const HeadComponent = dynamic(() => import('../components/head'));
+const Markdown = dynamic(() => import('../components/markdown'));
 const darkTheme = createTheme({
     palette: {
         mode: 'dark',
@@ -69,7 +71,7 @@ export default function Home(props) {
                 </main>
 
                 <footer className={styles.footer}>
-                    <p >Site made with <a href="https://nextjs.org/">Next.js</a> and <a href="https://mui.com">Material-UI</a> by Jeremy Soler</p>
+                    <p >Site made with <MuiLink href="https://nextjs.org/">Next.js</MuiLink> and <MuiLink href="https://mui.com">Material-UI</MuiLink> by Jeremy Soler</p>
                 </footer>
             </div> }
         </ThemeProvider>

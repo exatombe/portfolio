@@ -44,13 +44,7 @@ jobs:
       - name: Pull latest changes
         run : git pull
       - name: Check if everything is ok
-        run : |
-          if [ -e sitemap.xml ] && [ -e rss.xml ]; then
-            echo "Everything is ok"
-          else
-            echo "Sitemap or RSS not found"
-            exit 1
-          fi
+        run : (ls sitemap.xml && ls rss.xml && echo "Everything is ok") || (echo "Something is wrong" && exit 1)
 
   build:
     name: Build

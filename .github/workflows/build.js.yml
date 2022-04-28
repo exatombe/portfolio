@@ -46,7 +46,8 @@ jobs:
           if [ -f sitemap.xml ] && [ -f rss.xml ]; then
             echo "Everything is ok"
           else
-            raise error "Sitemap or RSS not found"
+            echo "Sitemap or RSS not found"
+            exit 1
           fi
 
   build:

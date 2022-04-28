@@ -65,7 +65,7 @@ fs.writeFileSync("./public/sitemap.xml", buildXmlSiteMap(sitemap));
 
 function buildRssFromPosts(postMap) {
     let rss = `<?xml version="1.0" encoding="UTF-8"?>
-    <rss version="2.0">
+    <rss version="2.0" xmlns:media=”http://search.yahoo.com/mrss/”>
         <channel>
             <title>Jeremy Soler</title>
             <link>https://jeremysoler.com/rss.xml</link>
@@ -81,7 +81,11 @@ function buildRssFromPosts(postMap) {
                 <description>${item.description}</description>
                 <pubDate>${String(new Date(item.date)).replace(" (Coordinated Universal Time)","")}</pubDate>
                 <author>${item.author}</author>
-                <category>${item.category}</category>               
+                <category>${item.category}</category>
+                <media:content url="https://jeremysoler.com/${item.image}" type="image/jpeg" medium="image" >
+                    <media:title>${item.title}</media:title>
+                    <media:description>${item.description}</media:description>
+                </media:content>
             </item>`;
     });
 

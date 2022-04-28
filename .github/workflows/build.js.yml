@@ -41,6 +41,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Go to public folder
         run : cd public
+      - name: Pull latest changes
+        run : git pull
       - name: Check if everything is ok
         run : |
           if [ -f sitemap.xml ] && [ -f rss.xml ]; then

@@ -39,12 +39,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Go to public folder
-        run : cd public
       - name: Pull latest changes
         run : git pull
       - name: Check if everything is ok
-        run : ls
+        run : cd public && (ls sitemap.xml && ls rss.xml && echo "Everything is ok") || (echo "Something is wrong" && exit 1)
 
   build:
     name: Build

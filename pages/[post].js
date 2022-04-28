@@ -50,9 +50,9 @@ export default function Home(props) {
 
                 <main className={styles.main}>
                     <h1 className={styles.title}>
-                        Jeremy Soler
+                        {config['root-data'].sitename}
                     </h1>
-                    <span className={styles.subtitle}>Développeur Web et Mobile</span>
+                    <span className={styles.subtitle}>{config['root-data'].description}</span>
                     <div className={styles.description}>
                         <Link href="/" passHref>
                             <Button variant="contained" color="primary">
@@ -67,7 +67,8 @@ export default function Home(props) {
                 </main>
 
                 <footer className={styles.footer}>
-                    <p >Site made with Next.js and Material-UI by Jeremy Soler</p>
+                    <p>{config['root-data'].footer}</p>
+                    <p>{config['root-data'].copyright}</p>
                 </footer>
             </div>
         </ThemeProvider>

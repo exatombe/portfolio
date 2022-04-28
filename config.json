@@ -28,5 +28,15 @@
         "email": "contact@jeremysoler.com",
         "github": "https://github.com/garder500",
         "linkedin": "https://www.linkedin.com/in/jeremy-soler-1b34b0200/"
+    },
+    "root-data":{
+        "sitename": "Jeremy Soler",
+        "sitedescription": "Jeremy Soler, Mobile and Web App develope. Ask me everyting via email : contact@jeremysoler.com",
+        "siteurl": "https://jeremysoler.com",
+        "description": "Développeur Web et Mobile",
+        "copiright": "© 2022 Jeremy Soler - Tous droits réservés",
+        "footer":"Site made with Next.js and Material-UI",
+        "keys": "Jeremy soler, web App, developper, mobile app, mobile developper, react native, react, nextjs, jeremysoler, jeremy soler, soler jeremy, jeremysoler.com, developpeur, mobile dev, react native dev, react dev, web app dev, dev web, developpeur react, developpeur PHP, developpeur Javascript, PHP, js, css, html, developpeur full stack, yaboku, bot-creator, The friend game, amis via app, making friend with yaboku",
+        "twitter": "garder500"
     }
 }

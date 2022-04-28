@@ -62,7 +62,7 @@ function buildXmlSiteMap(map) {
 
 fs.writeFileSync("./public/sitemap.xml", buildXmlSiteMap(sitemap));
 
-
+// Generate RSS feed using Post data.
 function buildRssFromPosts(postMap) {
     let rss = `<?xml version="1.0" encoding="UTF-8"?>
     <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">

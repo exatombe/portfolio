@@ -87,6 +87,7 @@ function buildRssFromPosts(postMap) {
                 <category>${item.category}</category>               
             </item>`;
     });
+    
     rss += `
         </channel>
     </rss>`;

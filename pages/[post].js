@@ -57,7 +57,7 @@ export default function Home(props) {
                     <div className={styles.description}>
                         <Link href="/" passHref>
                             <Button variant="contained" color="primary">
-                                Retourné au menu principal
+                                Retourner au menu principal
                             </Button>
                         </Link>
                     </div>

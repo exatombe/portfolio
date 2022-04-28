@@ -44,6 +44,7 @@ function buildXmlSiteMap(map) {
             <loc>https://jeremysoler.com</loc>
             <changefreq>daily</changefreq>
             <priority>1.0</priority>
+            <lastmod>${new Date()}</lastmod>
         </url>`;
     map.forEach(item => {
         xml += `

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { CssBaseline, Typography, Tabs, Tab, Box } from '@mui/material';
+import { CssBaseline, Typography, Tabs, Tab, Box, Grid} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
@@ -114,11 +114,13 @@ export default function Home(props) {
                 <Markdown md={props.home} />
               </TabPanel>
               <TabPanel value={value} index={1}>
+              <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                 { props.posts.map((post, index) => (
-                  <div key={index}>
+                  <Grid key={index} xs={4} sm={4} md={4} item >
                      <CardComponent title={post.title} description={post.description} image={post.image} link={post.link} />
-                  </div>
+                  </Grid>
                 ))}
+              </Grid>
               </TabPanel>
               <TabPanel value={value} index={2}>
                 <Typography>Info to contact me</Typography>

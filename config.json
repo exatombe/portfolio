@@ -22,7 +22,7 @@
         "database": ["MySQL", "Firebase"]
     },
     "posts": {
-        "root": "./global/posts/jsons"
+        "root": "./global/posts"
     },
     "contact": {
         "email": "contact@jeremysoler.com",

@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.css';
 import config from '../config.json';
 import Link from 'next/link';
 import fs from 'fs';
+import matter from 'gray-matter';
 import LoadingSpinner from '../components/loader';
 
 const HeadComponent = dynamic(() => import('../components/head'), { ssr: false });
@@ -21,7 +22,7 @@ export function getStaticPaths() {
     const files = fs.readdirSync(config.posts.root);
     return {
         paths: files.map(file => {
-            return { params: { post: file.replace('.json', '') } }
+            return { params: { post: file.replace('.md', '') } }
         }),
         fallback: false,
     }
@@ -31,12 +32,12 @@ export function getStaticProps(context) {
     function getFileContent(file) {
         return fs.readFileSync(file, 'utf-8');
     }
-    const post = getFileContent("./global/posts/" + context.params.post + ".md");
-    const postJSON = JSON.parse(getFileContent("./global/posts/jsons/" + context.params.post + ".json"));
+    const { content, data } = matter(getFileContent("./global/posts/" + context.params.post + ".md"));
+    
     return {
         props: {
-            post,
-            postJSON
+            content,
+            data
         }, // will be passed to the page component as props
     }
 }
@@ -46,7 +47,7 @@ export default function Home(props) {
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
              <div className={styles.container} suppressHydrationWarning={true}>
-                <HeadComponent title={props.postJSON.title} description={props.postJSON.description} />
+                <HeadComponent title={props.data.title} description={props.data.description} />
 
                 <main className={styles.main}>
                     <h1 className={styles.title}>
@@ -62,7 +63,7 @@ export default function Home(props) {
                     </div>
                     <hr style={{ height: "2px", width: "100%" }} />
                     <Box sx={{ width: '100%' }}>
-                        <Markdown md={props.post} />
+                        <Markdown md={props.content} />
                     </Box>
                 </main>
 

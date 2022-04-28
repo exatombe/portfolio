@@ -8,6 +8,7 @@ import config from '../config.json';
 import fs from 'fs';
 import HeadComponent from '../components/head';
 import LoadingSpinner from '../components/loader';
+import matter from 'gray-matter';
 const Markdown = dynamic(() => import('../components/markdown'), { ssr: false,loading: () => <LoadingSpinner/> });
 const CardComponent = dynamic(() => import('../components/card'), { ssr: false,loading: () => <LoadingSpinner/> });
 const darkTheme = createTheme({
@@ -37,8 +38,10 @@ export function getStaticProps(context) {
   }
   const home = getFileContent(config.root);
   const posts = files.map(file => {
-      return JSON.parse(getFileContent(file));
-  });
+      let { data } = matter(getFileContent(file));
+      data.link = file.split("/")[3].replace('.md', '');
+      return data;
+    });
   return {
     props: {
       home,

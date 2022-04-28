@@ -81,13 +81,10 @@ function buildRssFromPosts(postMap) {
                 <description>${item.description}</description>
                 <pubDate>${new Date(item.date)}</pubDate>
                 <author>Jeremy Soler</author>
-                <tags>${item.tags.map(e =>{
+                <tags>${item.tags.filter(e => e == ",").map(e =>{
                     return `<tag>${e}</tag>`;
                 })}</tags>
-                <category>${item.category}</category>
-                <media:content url="${item.image}"/>
-                    <media:title>${item.title}</media:title>
-                </media:content>                    
+                <category>${item.category}</category>               
             </item>`;
     });
     rss += `

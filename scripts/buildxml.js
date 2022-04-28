@@ -44,7 +44,7 @@ function buildXmlSiteMap(map) {
             <loc>https://jeremysoler.com</loc>
             <changefreq>daily</changefreq>
             <priority>1.0</priority>
-            <lastmod>${new Date()}</lastmod>
+            <lastmod>${String(new Date()).replace(" (Coordinated Universal Time)","")}</lastmod>
         </url>`;
     map.forEach(item => {
         xml += `
@@ -72,22 +72,19 @@ function buildRssFromPosts(postMap) {
             <description>Blog personnel de Jérémy soler</description>
             <language>fr-FR</language>
             `;
-    postMap.forEach(item => {
+    postMap.slice(0,25).forEach(item => {
         rss += `
             <item>
                 <title>${item.title}</title>                
                 <guid isPermaLink="true">${item.link}</guid>
                 <link>https://jeremysoler.com/${item.link}</link>
                 <description>${item.description}</description>
-                <pubDate>${new Date(item.date)}</pubDate>
-                <author>Jeremy Soler</author>
-                <tags>${item.tags.filter(e => e == ",").map(e =>{
-                    return `<tag>${e}</tag>`;
-                })}</tags>
+                <pubDate>${String(new Date(item.date)).replace(" (Coordinated Universal Time)","")}</pubDate>
+                <author>${item.author}</author>
                 <category>${item.category}</category>               
             </item>`;
     });
-    
+
     rss += `
         </channel>
     </rss>`;

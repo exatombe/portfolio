@@ -3,7 +3,7 @@ description: Spline, vous permet très simplement de créer des animations 3D po
 title: Animation 3D avec spline
 date: "2022-04-28"
 tags: [spline, animation, 3d, react, iframe]
-categories: animation
+category: animation
 author: Garder500
 image: https://assets-global.website-files.com/61406347b8db463e379e2732/6230c98c1385d05b974bf9cc_Mpfdihsn7PhE9XmVjLbFH61bUA_s8bq700lZ7nP82DPrAzhxQvwS_Pr6p9vym1yWxFzDn1OE8vt0344oTXkQw8Yz-RnOuNCBknW1SQSG2orR5rRYd3l3AQog2gks2rxeAkdXGV1f.jpeg
 ---

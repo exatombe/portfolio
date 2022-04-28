@@ -20,7 +20,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies
         run : npm install grey-matter
-      - run : node ./scripts/buildxml.js
+      - name: Build sitemap and RSS
+        run : node ./scripts/buildxml.js
       - name: update file and push to remote
         run: |
           git config --global user.name "github-actions[bot]"
@@ -29,7 +30,24 @@ jobs:
           git add -A
           git commit -m "SiteMap and RSS updated"
           git push
-        
+
+  check:
+    name: Check if everything is ok
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Go to public folder
+        run : cd public
+      - name: Check if everything is ok
+        run : |
+          if [ -f sitemap.xml ] && [ -f rss.xml ]; then
+            echo "Everything is ok"
+          else
+            raise error "Sitemap or RSS not found"
+          fi
+
   build:
     name: Build
     runs-on: ubuntu-latest

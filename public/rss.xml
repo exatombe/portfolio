@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <rss version="2.0">
+        <channel>
+            <title>Jeremy Soler</title>
+            <link>https://jeremysoler.com/rss.xml</link>
+            <description>Blog personnel de Jérémy soler</description>
+            <language>fr-FR</language>
+            
+            <item>
+                <title>Animation 3D avec spline</title>                
+                <guid isPermaLink="true">3d-graphics-with-spline</guid>
+                <link>https://jeremysoler.com/3d-graphics-with-spline</link>
+                <description>Spline, vous permet très simplement de créer des animations 3D pour le navigateur via React ou directement via des iframes.</description>
+                <pubDate>Thu Apr 28 2022 00:00:00 GMT+0000 (Coordinated Universal Time)</pubDate>
+                <author>Jeremy Soler</author>
+                <tags><tag>spline</tag>,<tag>animation</tag>,<tag>3d</tag>,<tag>react</tag>,<tag>iframe</tag></tags>
+                <category>undefined</category>
+                <media:content url="https://assets-global.website-files.com/61406347b8db463e379e2732/6230c98c1385d05b974bf9cc_Mpfdihsn7PhE9XmVjLbFH61bUA_s8bq700lZ7nP82DPrAzhxQvwS_Pr6p9vym1yWxFzDn1OE8vt0344oTXkQw8Yz-RnOuNCBknW1SQSG2orR5rRYd3l3AQog2gks2rxeAkdXGV1f.jpeg"/>
+                    <media:title>Animation 3D avec spline</media:title>
+                </media:content>                    
+            </item>
+        </channel>
+    </rss>

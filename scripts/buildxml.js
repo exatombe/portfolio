@@ -65,7 +65,7 @@ fs.writeFileSync("./public/sitemap.xml", buildXmlSiteMap(sitemap));
 
 function buildRssFromPosts(postMap) {
     let rss = `<?xml version="1.0" encoding="UTF-8"?>
-    <rss version="2.0" xmlns:media=”http://search.yahoo.com/mrss/”>
+    <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
         <channel>
             <title>Jeremy Soler</title>
             <link>https://jeremysoler.com/rss.xml</link>

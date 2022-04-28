@@ -45,7 +45,7 @@ jobs:
         run : git pull
       - name: Check if everything is ok
         run : |
-          if [ -f sitemap.xml ] && [ -f rss.xml ]; then
+          if [ -e sitemap.xml ] && [ -e rss.xml ]; then
             echo "Everything is ok"
           else
             echo "Sitemap or RSS not found"

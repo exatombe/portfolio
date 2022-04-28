@@ -68,8 +68,7 @@ export default function Home(props) {
                 </main>
 
                 <footer className={styles.footer}>
-                    <p>{config['root-data'].footer}</p> <br />
-                    <p>{config['root-data'].copyright}</p>
+                    <p>{config['root-data'].footer} | {config['root-data'].copyright}</p>
                 </footer>
             </div>
         </ThemeProvider>

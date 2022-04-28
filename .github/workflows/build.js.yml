@@ -18,13 +18,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: add test file
-        run : echo "Test push commit to the remote in the workflow" >> test.txt
+      - name: Install dependencies
+        run : npm install grey-matter
+      - run : node .\scripts\buildxml.js
       - name: update file and push to remote
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
+          
           git add -A
           git commit -m "Update test.txt"
           git push

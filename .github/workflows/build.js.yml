@@ -44,7 +44,7 @@ jobs:
       - name: Pull latest changes
         run : git pull
       - name: Check if everything is ok
-        run : (ls sitemap.xml && ls rss.xml && echo "Everything is ok") || (echo "Something is wrong" && exit 1)
+        run : ls
 
   build:
     name: Build

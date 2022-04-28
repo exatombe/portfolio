@@ -7,7 +7,7 @@ on:
 
 
 jobs:
-  test:
+  rssandsitemap:
     name: Building sitemap, and RSS
     runs-on: ubuntu-latest
     
@@ -34,7 +34,8 @@ jobs:
   check:
     name: Check if everything is ok
     runs-on: ubuntu-latest
-    
+    needs: [rssandsitemap]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -51,7 +52,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    needs: [test]
+    needs: [check]
 
     strategy:
       matrix:

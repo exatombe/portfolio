@@ -1,45 +1,14 @@
-# A propos de moi
+<div style="background:rgb(144, 202, 249); color:black;  border-radius:15px; padding: 0px 3px 3px 3px;text-align:center;">
+    <h2>Je me présente</h2>
+    <div style="text-align:left;">
+Je m'appele Jérémy Soler, et j'ai 18 ans. Je suis étudiant en BTS SIO, au CFA INSTA à Paris.
 
-## Somaire
+Je suis passioné de developpement depuis mes études, et j'ai décidé de me lancer dans le monde du développement web.
 
-- [Résumé de ma formation](#resume)
-- [Mes compétences](#competences)
+J'ai donc appris à me former et à développé des sites web, api, websockets, etc.
 
-## Résumé
-<div id="resume">
-<p>
-Je suis étudiant en BTS SIO option SLAM à l'école INSTA. Je suis actuellement alternant à l'entreprise Aprentiv'.
-Mon cursus est de 2 ans (jusqu'en 2023).
-A terme j'aurais apris les languages suivants :
-</p>
+J'ai également décidé de me lancer dans le monde du développement mobile. En utilisant React Native.
+
+*J'espère que vous me contacterez pour que l'on puisse ce rencontrer en personne.*
+    </div>
 </div>
-
-| Année scolaires | Langages |
-|:----------------|:--------|
-| 2022 | HTML/CSS/JS/PHP/SQL/Python |
-| 2023 | Java/C# |
-
-## Mes compétences
-<div id="competences">
-<p>Chose à noté, j'ai appris en auto-didacte pendant 2 ans à apprendre les languages suivants :</p>
-</div>
-
-| Année | Langages |
-|:------|:--------|
-| 2020 | HTML/CSS/JS/PHP/SQL |
-| 2021 | Javascript avec NodeJs |
-
-> J'évalue mes compétences dans ces languages plus que sufisantes. Voir supérieur à mon niveau d'étude.
-
-En plus d'apprendre ces languages, j'ai pu apprendre en auto-didacte à utiliser les frameworks suivants, voici un tableau vous résumant les framework appris ainsi que le niveau estimé de ma connaissance :
-
-| Framework | Langage | Niveau |
-|:---------|:--------|:-------|
-| React | Javascript | Avancé |
-| React-Native | Javascript | Avancé |
-| NextJs | Javascript | Moyen |
-| Symfony | PHP | Moyen |
-
-Afin d'hébérger mon site, j'utilise Github Pages.
-
-[Github Pages](https://pages.github.com/)

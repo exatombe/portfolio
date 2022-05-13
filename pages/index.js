@@ -133,25 +133,21 @@ export default function Home(props) {
               <TabPanel value={value} index={2}>
                   { !validation ? <Typography>
                     Merci de votre message, nous vous répondrons dans les plus brefs délais.
-                  </Typography>: <form onSubmit={handleSubmit}>
+                  </Typography>: <form method="POST" onSubmit={handleSubmit}>
                     <div>
-                      <label htmlFor="name">Nom</label>
-                      <Input type="text" name="name" id="name" />
+                      <Input type="text" label="Nom" name="name" id="name" />
                       <ValidationError prefix='Name' field="name" errors={state.errors} />
                     </div>
                     <div>
-                      <label htmlFor="prenom">Prénom</label>
-                      <Input type="text" name="prenom" id="prenom" />
+                      <Input type="text" label="Prénom" name="prenom" id="prenom" />
                       <ValidationError prefix='Prenom' field="prenom" errors={state.errors} />
                     </div>
                     <div>
-                      <label htmlFor="email">Email</label>
-                      <Input type="email" name="email" id="email" />
+                      <Input type="email" label="Email" name="email" id="email" />
                       <ValidationError prefix='Email' field="email" errors={state.errors} />
                     </div>
                     <div>
-                      <label htmlFor="message">Message</label>
-                      <Input name="message" id="message" multiline rows={4} />
+                      <Input name="message" id="message" label="Message" multiline rows={4} />
                       <ValidationError prefix='Message' field="message" errors={state.errors} />
                     </div>
                     <Button type="submit">Envoyer</Button>

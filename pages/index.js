@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { CssBaseline, Typography, Tabs, Tab, Box, Grid} from '@mui/material';
+import { CssBaseline, Typography, Tabs, Tab, Box, Grid, Input, Button} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
@@ -9,6 +9,7 @@ import fs from 'fs';
 import HeadComponent from '../components/head';
 import LoadingSpinner from '../components/loader';
 import matter from 'gray-matter';
+import { useForm, ValidationError } from '@formspree/react';
 const Markdown = dynamic(() => import('../components/markdown'), { ssr: false,loading: () => <LoadingSpinner/> });
 const CardComponent = dynamic(() => import('../components/card'), { ssr: false,loading: () => <LoadingSpinner/> });
 const darkTheme = createTheme({
@@ -88,7 +89,11 @@ export default function Home(props) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  const [state, handleSubmit] = useForm("mvoldqyk");
+  const [setValidation,validation] = useState(false);
+  if (state.succeeded) {
+    setValidation(true);
+  }
   
     return (
       <ThemeProvider theme={darkTheme}>
@@ -126,7 +131,32 @@ export default function Home(props) {
               </Grid>
               </TabPanel>
               <TabPanel value={value} index={2}>
-                <Typography>Info to contact me</Typography>
+                  { validation ? <Typography>
+                    Merci de votre message, nous vous répondrons dans les plus brefs délais.
+                  </Typography>: <form onSubmit={handleSubmit}>
+                    <div>
+                      <label htmlFor="name">Nom</label>
+                      <Input type="text" name="name" id="name" />
+                      <ValidationError prefix='Name' field="name" errors={state.errors} />
+                    </div>
+                    <div>
+                      <label htmlFor="prenom">Prénom</label>
+                      <Input type="text" name="prenom" id="prenom" />
+                      <ValidationError prefix='Prenom' field="prenom" errors={state.errors} />
+                    </div>
+                    <div>
+                      <label htmlFor="email">Email</label>
+                      <Input type="email" name="email" id="email" />
+                      <ValidationError prefix='Email' field="email" errors={state.errors} />
+                    </div>
+                    <div>
+                      <label htmlFor="message">Message</label>
+                      <Input name="message" id="message" multiline rows={4} />
+                      <ValidationError prefix='Message' field="message" errors={state.errors} />
+                    </div>
+                    <Button type="submit">Envoyer</Button>
+                  </form>}
+
               </TabPanel>
             </Box>
           </main>

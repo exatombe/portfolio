@@ -131,7 +131,7 @@ export default function Home(props) {
               </Grid>
               </TabPanel>
               <TabPanel value={value} index={2}>
-                  { validation ? <Typography>
+                  { !validation ? <Typography>
                     Merci de votre message, nous vous répondrons dans les plus brefs délais.
                   </Typography>: <form onSubmit={handleSubmit}>
                     <div>

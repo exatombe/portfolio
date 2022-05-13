@@ -90,10 +90,7 @@ export default function Home(props) {
     setValue(newValue);
   };
   const [state, handleSubmit] = useForm("moqrylza");
-  const [setValidation,validation] = useState(false);
-  if (state.succeeded) {
-    setValidation(true);
-  }
+
   
     return (
       <ThemeProvider theme={darkTheme}>
@@ -131,9 +128,7 @@ export default function Home(props) {
               </Grid>
               </TabPanel>
               <TabPanel value={value} index={2}>
-                  { !validation ? <Typography>
-                    Merci de votre message, nous vous répondrons dans les plus brefs délais.
-                  </Typography>: <form method="POST" onSubmit={handleSubmit}>
+                  <form method="POST" onSubmit={handleSubmit}>
                     <div>
                       <Input type="text" label="Nom" name="name" id="name" />
                       <ValidationError prefix='Name' field="name" errors={state.errors} />
@@ -151,8 +146,7 @@ export default function Home(props) {
                       <ValidationError prefix='Message' field="message" errors={state.errors} />
                     </div>
                     <Button type="submit">Envoyer</Button>
-                  </form>}
-
+                  </form>
               </TabPanel>
             </Box>
           </main>

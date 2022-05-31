@@ -165,13 +165,13 @@ export default function Home(props) {
                     <h2 className={styles.contact_form_title}>CONTACT</h2>
                     <div className={styles.links}>
                       <div className={styles.link}>
-                        <a href="https://www.linkedin.com/in/jeremy-soler-1b34b0200/" target="_blank"><img className={styles.contact_form_img} src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin" /></a>
+                        <a href="https://www.linkedin.com/in/jeremy-soler-1b34b0200/" rel="noreferrer" target="_blank"><img className={styles.contact_form_img} src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin" /></a>
                       </div>
                       <div className={styles.link}>
-                        <a href="https://www.linkedin.com/in/jeremy-soler-1b34b0200/" target="_blank"><img className={styles.contact_form_img} src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github" /></a>
+                        <a href="https://www.linkedin.com/in/jeremy-soler-1b34b0200/" rel="noreferrer" target="_blank"><img className={styles.contact_form_img} src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github" /></a>
                       </div>
                       <div className={styles.link}>
-                        <a><img className={styles.contact_form_img} src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email" /></a>
+                        <a href="mailto:contact@jeremysoler.com" ><img className={styles.contact_form_img} src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email" /></a>
                       </div>
                     </div>
                   </div>

@@ -122,14 +122,7 @@ export default function Home(props) {
   }, [state.succeeded, state.errors]);
 
 
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    if(window) {
-      setLoading(false);
-    }else{
-      setLoading(true);
-    }
-  }, [loading]);
+
   const particlesInit = async (main) => {
     console.log(main);
 

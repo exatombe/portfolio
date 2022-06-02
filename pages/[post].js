@@ -62,7 +62,7 @@ export default function Home(props) {
                         </Link>
                     </div>
                     <hr style={{ height: "2px", width: "100%" }} />
-                    <Box sx={{ width: '100%' }}>
+                    <Box sx={{ maxWidth:'1000px' }}>
                         <Markdown md={props.content} />
                     </Box>
                 </main>

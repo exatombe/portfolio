@@ -11,7 +11,8 @@ import fs from 'fs';
 import HeadComponent from '../components/head';
 import LoadingSpinner from '../components/loader';
 import matter from 'gray-matter';
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm } from '@formspree/react';
+import Timeline from '../components/timeline';
 const Markdown = dynamic(() => import('../components/markdown'), { ssr: false, loading: () => <LoadingSpinner /> });
 const CardComponent = dynamic(() => import('../components/card'), { ssr: false, loading: () => <LoadingSpinner /> });
 const darkTheme = createTheme({
@@ -121,6 +122,14 @@ export default function Home(props) {
   }, [state.succeeded, state.errors]);
 
 
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    if(window) {
+      setLoading(false);
+    }else{
+      setLoading(true);
+    }
+  }, [loading]);
   const particlesInit = async (main) => {
     console.log(main);
 
@@ -266,12 +275,32 @@ export default function Home(props) {
 
             </p>
 
-            <Box sx={{ width: '100%' }}>
-              <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange} centered aria-label="basic tabs example">
-                  <Tab label={"A propos"}    {...a11yProps(0)} />
-                  <Tab label={"Articles"} {...a11yProps(1)} />
-                  <Tab label={"Contact"} {...a11yProps(2)} />
+            <Box centered sx={{ width:"100%" }}>
+              <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
+              <Tabs 
+                value={value} 
+                onChange={handleChange}
+                
+                variant="scrollable"
+                scrollButtons
+                allowScrollButtonsMobile
+                aria-label="Tableau de choix">
+                  <Tab sx={{
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                  }} label={"A propos"}    {...a11yProps(0)} />
+                  <Tab sx={{
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                  }} label={"Articles"} {...a11yProps(1)} />
+                  <Tab sx={{
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                  }} label={"Parcours"} {...a11yProps(2)} />
+                  <Tab sx={{
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                  }} label={"Contact"} {...a11yProps(3)} />
                 </Tabs>
               </Box>
               <TabPanel value={value} index={0}>
@@ -287,6 +316,9 @@ export default function Home(props) {
                 </Grid>
               </TabPanel>
               <TabPanel value={value} index={2}>
+                <Timeline />
+              </TabPanel>
+              <TabPanel value={value} index={3}>
                 <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
                   <Alert onClose={handleClose} severity={alertMsg.severity} sx={{ width: '100%' }}>
                     {alertMsg.msg}

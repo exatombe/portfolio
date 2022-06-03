@@ -13,10 +13,11 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Download", name: "download", widget: "string"}
+      - {label: "Modified", name: "modified", widget: "datetime"}
       - {label: "Categorie", name: "category", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Author", name: "author", widget: "string", default: "Admin"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "content", widget: "markdown"}
   - name: "home" # Used in routes, e.g., /admin/collections/blog
     label: "Index Page" # Used in the UI
     folder: "data" # The path to the folder where the markdown files are stored

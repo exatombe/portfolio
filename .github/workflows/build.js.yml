@@ -2,8 +2,8 @@ name: Deploy to GitHub Pages
 
 
 on:
-  push:
-    branches: [main]
+  sheldule:
+    cron: "0 10 * * 1"
 
 
 jobs:
@@ -30,47 +30,3 @@ jobs:
           git add -A
           git commit -m "SiteMap and RSS updated"
           git push
-
-  check:
-    name: Check if everything is ok
-    runs-on: ubuntu-latest
-    needs: [rssandsitemap]
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Pull latest changes
-        run : git pull
-      - name: Check if everything is ok
-        run : cd public && (ls sitemap.xml && ls rss.xml && echo "Everything is ok") || (echo "Something is wrong" && exit 1)
-
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    needs: [check]
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-
-
-    steps:
-      - name: Get files
-        uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install packages
-        run: npm ci
-      - name: Installing dependencies
-        run: npm i @next/swc-linux-x64-gnu @next/swc-linux-x64-musl
-      - name: Build and Export static files
-        run: npm run export
-      - name: Add .nojekyll file
-        run: touch ./out/.nojekyll
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          branch: gh-pages
-          folder: out

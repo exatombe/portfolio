@@ -19,13 +19,21 @@ const darkTheme = createTheme({
 
 
 export function getStaticPaths() {
-    const files = fs.readdirSync("./posts");
+    try{
+        const files = fs.readdirSync("./posts");
     return {
         paths: files.map(file => {
             return { params: { post: file.replace('.md', '') } }
         }),
         fallback: false,
     }
+    }catch(e){
+        return {
+            paths: [],
+            fallback: false,
+        }
+    }
+    
 }
 
 export function getStaticProps(context) {

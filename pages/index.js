@@ -35,17 +35,22 @@ export function getStaticProps(context) {
       }
     });
   }
-
+  let posts = [];
+try{
   const files = readDirAndDisplay("./posts");
   function getFileContent(file) {
     return fs.readFileSync(file, 'utf-8');
   }
-  const home = getFileContent(config.root);
-  const posts = files.map(file => {
+  posts = files.map(file => {
     let { data } = matter(getFileContent(file));
     data.link = file.split("/")[3].replace('.md', '');
     return data;
-  });
+  });  
+}catch(e){
+  posts = [];
+}
+  const home = getFileContent(config.root);
+
   return {
     props: {
       home,

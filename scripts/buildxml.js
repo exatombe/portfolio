@@ -81,7 +81,7 @@ function buildRssFromPosts(postMap) {
                 <pubDate>${String(new Date()).replace(" (Coordinated Universal Time)","")}</pubDate>
                 <author>${item.author}</author>
                 <category>${item.category}</category>
-                <media:content url="${item.image}" type="image/jpeg" medium="image" >
+                <media:content url="${item.thumbnail}" type="image/jpeg" medium="image" >
                     <media:title>${item.title}</media:title>
                     <media:description>${item.description}</media:description>
                 </media:content>

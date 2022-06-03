@@ -78,7 +78,7 @@ function buildRssFromPosts(postMap) {
                 <guid isPermaLink="true">${item.link}</guid>
                 <link>https://jeremysoler.com/${item.link}</link>
                 <description>${item.description}</description>
-                <pubDate>${String(new Date(item.date)).replace(" (Coordinated Universal Time)","")}</pubDate>
+                <pubDate>${String(new Date()).replace(" (Coordinated Universal Time)","")}</pubDate>
                 <author>${item.author}</author>
                 <category>${item.category}</category>
                 <media:content url="${item.image}" type="image/jpeg" medium="image" >

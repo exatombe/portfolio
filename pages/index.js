@@ -22,9 +22,17 @@ const darkTheme = createTheme({
 });
 
 
-export function getStaticProps(context) {
-  function readDirAndDisplay(dir) {
-    const files = fs.readdirSync(dir);
+export async function getStaticProps(context) {
+  async function readDirAndDisplay(dir) {
+    const GetDir = new Promise((resolve, reject) => {
+    fs.readdir(dir, (err, files) => {
+      if (err) {
+        reject([])
+        }
+      resolve(files)
+      });
+    });
+    const files = await GetDir;
     return files.map(file => {
       const filePath = `${dir}/${file}`;
       const stat = fs.statSync(filePath);
@@ -39,17 +47,14 @@ export function getStaticProps(context) {
 function getFileContent(file) {
     return fs.readFileSync(file, 'utf-8');
   }
-try{
-  const files = readDirAndDisplay("./posts");
-
+const files = await readDirAndDisplay("./posts");
   posts = files.map(file => {
     let { data } = matter(getFileContent(file));
-    data.link = file.split("/")[3].replace('.md', '');
+    data.link = file.split("/")[2].replace('.md', '');
     return data;
   });  
-}catch(e){
-  posts = [];
-}
+
+
   const home = getFileContent(config.root);
 
   return {
@@ -309,7 +314,7 @@ export default function Home(props) {
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                   {props.posts.map((post, index) => (
                     <Grid key={index} xs={4} sm={4} md={4} item >
-                      <CardComponent title={post.title} description={post.description} image={post.image} link={post.link} />
+                      <CardComponent title={post.title} description={post.description} image={post.thumbnail} link={post.link} />
                     </Grid>
                   ))}
                 </Grid>

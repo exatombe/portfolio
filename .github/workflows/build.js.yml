@@ -65,9 +65,7 @@ jobs:
         run: npm ci
       - name: Installing dependencies
         run: npm i @next/swc-linux-x64-gnu @next/swc-linux-x64-musl
-      - name: Build project
-        run: npm run build
-      - name: Export static files
+      - name: Build and Export static files
         run: npm run export
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll

@@ -1,27 +1,26 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
-publish_mode: editorial_workflow
-media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+  branch: main
+media_folder: public/img #images that are uploaded via Netlify Cms interface will be stored in this folder
+public_folder: img #I dont know
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "_posts/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "BlogPost" # Used in the UI
+    folder: "posts" # The path to the folder where the markdown files are stored
+    create: true # Allow users to create new markdown files.
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+    fields: # The fields for front matter. You will need to modify fields according to your project.
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Download", name: "download", widget: "string"}
+      - {label: "Categorie", name: "category", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+      - {label: "Author", name: "author", widget: "string", default: "Admin"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "posts"
-    label: "Post"
-    folder: "_posts"
-    filter:
-      field: langage
-      value: fr
-    fields:
-      - {label: "Langage", name: "langage"}
+  - name: "home" # Used in routes, e.g., /admin/collections/blog
+    label: "Index Page" # Used in the UI
+    folder: "_data/root" # The path to the folder where the markdown files are stored
+    create: true # Allow users to create new markdown files.
+    slug: "index" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for front matter. You will need to modify fields according to your project.
+      - {label: "Body", name: "body", widget: "markdown"}

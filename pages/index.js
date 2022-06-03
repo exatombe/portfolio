@@ -36,7 +36,7 @@ export function getStaticProps(context) {
     });
   }
 
-  const files = readDirAndDisplay(config.posts.root);
+  const files = readDirAndDisplay("./posts");
   function getFileContent(file) {
     return fs.readFileSync(file, 'utf-8');
   }

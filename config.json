@@ -1,5 +1,5 @@
 {
-    "root": "./global/index.md",
+    "root": "./_data/root/index.md",
     "skills":{
         "range": [{
             "name": "HTML",
@@ -20,9 +20,6 @@
         "languages": ["HTML", "CSS", "JavaScript", "React", "PHP"],
         "frameworks": ["React", "Symfony", "Bootstrap", "jQuery", "React-native"],
         "database": ["MySQL", "Firebase"]
-    },
-    "posts": {
-        "root": "./global/posts"
     },
     "contact": {
         "email": "contact@jeremysoler.com",

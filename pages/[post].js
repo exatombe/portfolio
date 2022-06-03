@@ -19,7 +19,7 @@ const darkTheme = createTheme({
 
 
 export function getStaticPaths() {
-    const files = fs.readdirSync(config.posts.root);
+    const files = fs.readdirSync("./posts");
     return {
         paths: files.map(file => {
             return { params: { post: file.replace('.md', '') } }
@@ -32,7 +32,7 @@ export function getStaticProps(context) {
     function getFileContent(file) {
         return fs.readFileSync(file, 'utf-8');
     }
-    const { content, data } = matter(getFileContent("./global/posts/" + context.params.post + ".md"));
+    const { content, data } = matter(getFileContent("./posts/" + context.params.post + ".md"));
     
     return {
         props: {

@@ -1,6 +1,5 @@
 const fs = require("fs");
 const matter = require("gray-matter");
-const config = require("../config.json");
 function readDirAndDisplay(dir) {
     const files = fs.readdirSync(dir);
     return files.map(file => {
@@ -14,7 +13,7 @@ function readDirAndDisplay(dir) {
     });
   }
 
-    const files = readDirAndDisplay(config.posts.root);
+    const files = readDirAndDisplay("./posts");
 
     function getFileContent(file) {
         return fs.readFileSync(file, "utf-8");

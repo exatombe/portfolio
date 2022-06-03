@@ -21,7 +21,7 @@ function readDirAndDisplay(dir) {
 
 let posts = files.map(file => {
     let { data } = matter(getFileContent(file));
-    data.link = file.split("/")[3].replace(".md", "");
+    data.link = file.split("/")[2].replace(".md", "");
     return data;
 });
 

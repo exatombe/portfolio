@@ -1,5 +1,5 @@
 {
-    "root": "./_data/root/index.md",
+    "root": "./data/index.md",
     "skills":{
         "range": [{
             "name": "HTML",

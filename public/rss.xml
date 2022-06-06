@@ -11,12 +11,25 @@
                 <guid isPermaLink="true">2022-06-03-scan-tief</guid>
                 <link>https://jeremysoler.com/2022-06-03-scan-tief</link>
                 <description>Une application pour lire des scans, faite avec React-native</description>
-                <pubDate>Mon Jun 06 2022 10:27:12 GMT+0000</pubDate>
+                <pubDate>Mon Jun 06 2022 23:43:50 GMT+0000</pubDate>
                 <author>Jérémy Soler</author>
                 <category>React-native</category>
                 <media:content url="https://www.appstud.com/wp-content/uploads/2018/03/React-Native-Titre.png" type="image/jpeg" medium="image" >
                     <media:title>Scan-tief</media:title>
                     <media:description>Une application pour lire des scans, faite avec React-native</media:description>
+                </media:content>
+            </item>
+            <item>
+                <title>BTS SIO </title>                
+                <guid isPermaLink="true">2022-06-06-bts-sio</guid>
+                <link>https://jeremysoler.com/2022-06-06-bts-sio</link>
+                <description>Qu'est ce que le BTS SIO ?</description>
+                <pubDate>Mon Jun 06 2022 23:43:50 GMT+0000</pubDate>
+                <author>Jérémy Soler</author>
+                <category>education</category>
+                <media:content url="https://www.btsinfo.fr/wp-content/uploads/2017/10/logo-certa.png" type="image/jpeg" medium="image" >
+                    <media:title>BTS SIO </media:title>
+                    <media:description>Qu'est ce que le BTS SIO ?</media:description>
                 </media:content>
             </item>
         </channel>

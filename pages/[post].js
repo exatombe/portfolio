@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css';
 import config from '../config.json';
 import Link from 'next/link';
 import fs from 'fs';
-import matter from 'gray-matter';
+import matter from 'frontmatter';
 import LoadingSpinner from '../components/loader';
 
 const HeadComponent = dynamic(() => import('../components/head'), { ssr: false });

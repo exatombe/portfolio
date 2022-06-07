@@ -10,7 +10,7 @@ import config from '../config.json';
 import fs from 'fs';
 import HeadComponent from '../components/head';
 import LoadingSpinner from '../components/loader';
-import matter from 'gray-matter';
+import matter from 'frontmatter';
 import { useForm } from '@formspree/react';
 import Timeline from '../components/timeline';
 const Markdown = dynamic(() => import('../components/markdown'), { ssr: false, loading: () => <LoadingSpinner /> });

@@ -13,6 +13,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Download", name: "download", widget: "string", required: false}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
       - {label: "Categorie", name: "category", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Author", name: "author", widget: "string", default: "Public"}

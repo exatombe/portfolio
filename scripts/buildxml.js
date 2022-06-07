@@ -1,5 +1,6 @@
 const fs = require("fs");
-const matter = require("gray-matter");
+const moment = require("moment");
+const matter = require("frontmatter");
 function readDirAndDisplay(dir) {
     const files = fs.readdirSync(dir);
     return files.map(file => {
@@ -43,7 +44,7 @@ function buildXmlSiteMap(map) {
             <loc>https://jeremysoler.com</loc>
             <changefreq>daily</changefreq>
             <priority>1.0</priority>
-            <lastmod>${String(new Date()).replace(" (Coordinated Universal Time)","")}</lastmod>
+            <lastmod>${moment().format("YYYY-MM-DD")}</lastmod>
         </url>`;
     map.forEach(item => {
         xml += `
@@ -78,7 +79,7 @@ function buildRssFromPosts(postMap) {
                 <guid isPermaLink="true">${item.link}</guid>
                 <link>https://jeremysoler.com/${item.link}</link>
                 <description>${item.description}</description>
-                <pubDate>${String(new Date()).replace(" (Coordinated Universal Time)","")}</pubDate>
+                <pubDate>${String(new Date(item?.date || Date.now()).toUTCString()).replace("GMT","+0000")}</pubDate>
                 <author>${item.author}</author>
                 <category>${item.category}</category>
                 <media:content url="${item.thumbnail}" type="image/jpeg" medium="image" >

@@ -19,7 +19,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install dependencies
-        run : npm install moment
+        run : npm install moment frontmatter
       - name: Build sitemap and RSS
         run : node ./scripts/buildxml.js
       - name: Remove unnecessary modules

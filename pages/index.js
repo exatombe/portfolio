@@ -3,11 +3,11 @@ import { CssBaseline, Tabs, Tab, Box, Grid, Snackbar, Alert } from '@mui/materia
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
 import styles from '../styles/Home.module.css';
 import config from '../config.json';
 import fs from 'fs';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
 import HeadComponent from '../components/head';
 import LoadingSpinner from '../components/loader';
 import matter from 'frontmatter';
@@ -133,10 +133,7 @@ export default function Home(props) {
     }
   }, [state.succeeded, state.errors]);
 
-
-
   const particlesInit = async (main) => {
-    console.log(main);
 
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -145,15 +142,22 @@ export default function Home(props) {
   };
 
   const particlesLoaded = (container) => {
-    console.log(container);
   };
+
+
+
 
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <div className={styles.container} suppressHydrationWarning={true}>
         <HeadComponent title={config['root-data'].sitename} description={config["root-data"].sitedescription} />
-        <Particles
+         <Particles
+        style={{
+          zIndex: -1,
+          position:"fixed",
+          opacity:0.8
+        }}
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
@@ -221,6 +225,9 @@ export default function Home(props) {
         }
       }
     },
+    "fullScreen": {
+      "enable": false
+    },
     "interactivity": {
       "detect_on": "canvas",
       "events": {
@@ -271,7 +278,7 @@ export default function Home(props) {
   }))
 }/>
         <main className={styles.main} >
-        
+       
             <h1 className={styles.title}>
               {config['root-data'].sitename}
             </h1>
@@ -367,7 +374,7 @@ export default function Home(props) {
               </TabPanel>
             </Box>            
         </main>
-
+        
         <footer className={styles.footer}>
           <p>{config['root-data'].footer} | {config['root-data'].copyright}</p>
         </footer>

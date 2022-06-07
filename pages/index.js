@@ -51,6 +51,7 @@ const files = await readDirAndDisplay("./posts");
   posts = files.map(file => {
     let { data } = matter(getFileContent(file));
     data.link = file.split("/")[2].replace('.md', '');
+    data.date = String(new Date(data.date).toUTCString()).replace("GMT","+0000")
     return data;
   });  
 

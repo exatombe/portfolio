@@ -1,7 +1,6 @@
 import { CssBaseline } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import MuiLink from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import dynamic from 'next/dynamic';
 import ButtonGroup from '@mui/material/ButtonGroup';
@@ -10,7 +9,7 @@ import config from '../config.json';
 import Link from 'next/link';
 import fs from 'fs';
 import matter from 'frontmatter';
-const HeadComponent = dynamic(() => import('../components/head'), { ssr: false });
+import HeadComponent from '../components/head';
 const Markdown = dynamic(() => import('../components/markdown'), { ssr: false });
 const darkTheme = createTheme({
     palette: {

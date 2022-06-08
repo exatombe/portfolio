@@ -1,5 +1,7 @@
 import { CssBaseline } from '@mui/material';
-import { Box, Button, Link as MuiLink } from '@mui/material';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import MuiLink from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import dynamic from 'next/dynamic';
 import ButtonGroup from '@mui/material/ButtonGroup';
@@ -8,10 +10,8 @@ import config from '../config.json';
 import Link from 'next/link';
 import fs from 'fs';
 import matter from 'frontmatter';
-import LoadingSpinner from '../components/loader';
-
 const HeadComponent = dynamic(() => import('../components/head'), { ssr: false });
-const Markdown = dynamic(() => import('../components/markdown'), { ssr: false, loading: () => <LoadingSpinner /> });
+const Markdown = dynamic(() => import('../components/markdown'), { ssr: false });
 const darkTheme = createTheme({
     palette: {
         mode: 'dark',

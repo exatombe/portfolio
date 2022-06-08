@@ -1,21 +1,22 @@
-import PropTypes from 'prop-types';
-import { CssBaseline, Tabs, Tab, Box, Grid, Snackbar, Alert } from '@mui/material';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
-import styles from '../styles/Home.module.css';
-import config from '../config.json';
-import fs from 'fs';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
-import HeadComponent from '../components/head';
-import LoadingSpinner from '../components/loader';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
 import matter from 'frontmatter';
-import { useForm } from '@formspree/react';
-import Timeline from '../components/timeline';
-import Image from 'next/image';
-const Markdown = dynamic(() => import('../components/markdown'), { ssr: false, loading: () => <LoadingSpinner /> });
-const CardComponent = dynamic(() => import('../components/card'), { ssr: false, loading: () => <LoadingSpinner /> });
+import fs from 'fs';
+import dynamic from 'next/dynamic';
+import PropTypes from 'prop-types';
+import { useState } from 'react';
+import config from '../config.json';
+import styles from '../styles/Home.module.css';
+const ContactForm = dynamic(() => import('../components/contactForm'), { ssr: false });
+const HeadComponent = dynamic(() => import('../components/head'), { ssr: false });
+const Timeline = dynamic(() => import('../components/timeline'), { ssr: false });
+const Markdown = dynamic(() => import('../components/markdown'), { ssr: false });
+const CardComponent = dynamic(() => import('../components/card'), { ssr: false});
+const Particles = dynamic(() => import("../components/particles"), { ssr: false });
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
@@ -101,186 +102,17 @@ function a11yProps(index) {
 }
 
 export default function Home(props) {
-  const ImageLoader = ({ src, width, quality }) => {
-    return src;
-  }
+
   const [value, setValue] = useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const [state, handleSubmit] = useForm("moqrylza");
-  const [open, setOpen] = useState(false);
-  const [alertMsg, setAlertMsg] = useState({
-    severity: 'success',
-    msg: 'Votre message m\'as bien été transmis, je vous répondrai dans les plus brefs délais.',
-  })
-  const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-    setOpen(false);
-  };
-  useEffect(() => {
-    if (state.succeeded) {
-      setAlertMsg({
-        severity: 'success',
-        msg: 'Votre message m\'as bien été transmis, je vous répondrai dans les plus brefs délais.',
-      })
-      setOpen(true);
-    }
-    if (state.errors.length > 0) {
-      setAlertMsg({
-        severity: 'error',
-        msg: 'Une erreur est survenue, veuillez réessayer.',
-      })
-      setOpen(true);
-    }
-  }, [state.succeeded, state.errors]);
-
-  const particlesInit = async (main) => {
-
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(main);
-  };
-
-  const particlesLoaded = (container) => {
-  };
-
-
-
-
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <div className={styles.container} suppressHydrationWarning={true}>
         <HeadComponent title={config['root-data'].sitename} description={config["root-data"].sitedescription} />
-         <Particles
-        style={{
-          zIndex: -1,
-          position:"fixed",
-          opacity:0.8
-        }}
-      id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
-      options={
-    JSON.parse(JSON.stringify({
-    "particles": {
-      "number": {
-        "value": 40,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-      },
-      "opacity": {
-        "value": 0.25,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 5,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 0.5,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "fullScreen": {
-      "enable": false
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 2
-        },
-        "repulse": {
-          "distance": 200
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#b61924",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
-    }
-  }))
-}/>
+         <Particles />
         <main className={styles.main} >
        
             <h1 className={styles.title}>
@@ -334,46 +166,7 @@ export default function Home(props) {
                 <Timeline />
               </TabPanel>
               <TabPanel value={value} index={3}>
-                <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-                  <Alert onClose={handleClose} severity={alertMsg.severity} sx={{ width: '100%' }}>
-                    {alertMsg.msg}
-                  </Alert>
-                </Snackbar>
-                <section className={styles.contact_form}>
-                  <div className={styles.contact_box}>
-                    <div className={styles.contact_links}>
-                      <h2 className={styles.contact_form_title}>CONTACT</h2>
-                      <div className={styles.links}>
-                        <div className={styles.link}>
-                          <a href="https://www.linkedin.com/in/jeremy-soler-1b34b0200/" rel="noreferrer" target="_blank"><Image height='32' width='32' loader={ImageLoader} className={styles.contact_form_img} src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin" /></a>
-                        </div>
-                        <div className={styles.link}>
-                          <a href="https://github.com/garder500/" rel="noreferrer" target="_blank"><Image height='32' width='32' loader={ImageLoader} className={styles.contact_form_img} src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github" /></a>
-                        </div>
-                        <div className={styles.link}>
-                          <a href="mailto:contact@jeremysoler.com" ><Image loader={ImageLoader} height='32' width='32'  className={styles.contact_form_img} src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email" /></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles.contact_form_wrapper}>
-                      <form method="POST" onSubmit={handleSubmit}>
-                        <div className={styles.form_item}>
-                          <input className={styles.contact_form_input} type="text" name="sender" required />
-                          <label className={styles.contact_form_label}>Name:</label>
-                        </div>
-                        <div className={styles.form_item}>
-                          <input type="text" className={styles.contact_form_input} name="email" required />
-                          <label className={styles.contact_form_label}>Email:</label>
-                        </div>
-                        <div className={styles.form_item}>
-                          <textarea className={styles.contact_form_textarea} name="message" required></textarea>
-                          <label className={styles.contact_form_label}>Message:</label>
-                        </div>
-                        <button className={styles.submit_btn} type="submit">Send</button>
-                      </form>
-                    </div>
-                  </div>
-                </section>
+                    <ContactForm />
               </TabPanel>
             </Box>            
         </main>

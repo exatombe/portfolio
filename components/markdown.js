@@ -1,7 +1,14 @@
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import Link from "next/link";
-import { Link as MuiLink, Paper, TableRow, TableHead, TableContainer, TableCell, Table, TableBody} from "@mui/material";
+import MuiLink from '@mui/material/Link';
+import Paper from '@mui/material/Paper';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import TableContainer from '@mui/material/TableContainer';
 import ReactMarkdown from 'react-markdown';
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";

@@ -3,7 +3,7 @@ import { useForm } from '@formspree/react';
 import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
 import styles from '../styles/Home.module.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function ContactForm() {
     const ImageLoader = ({ src, width, quality }) => {

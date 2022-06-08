@@ -5,6 +5,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = withBundleAnalyzer({
   reactStrictMode: false,
   productionBrowserSourceMaps: true,
+  experimental: { images: { layoutRaw: true } },
 })
 
 module.exports = nextConfig

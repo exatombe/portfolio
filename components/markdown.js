@@ -25,7 +25,7 @@ export default function Markdown({md}) {
         if(className == "language-geojson") {
           return (<Markdown md='
           <div class="frames">
-          <iframe class="responsive-iframes" sandbox="allow-scripts allow-same-origin allow-top-navigation" src="/mapBox.html">
+          <iframe title="Ma geo Localisation " class="responsive-iframes" sandbox="allow-scripts allow-same-origin allow-top-navigation" src="/mapBox.html">
           </iframe>
           </div>' />
           )

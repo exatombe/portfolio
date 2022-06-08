@@ -292,7 +292,6 @@ export default function Home(props) {
               <Tabs 
                 value={value} 
                 onChange={handleChange}
-                
                 variant="scrollable"
                 scrollButtons
                 allowScrollButtonsMobile

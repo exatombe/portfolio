@@ -17,36 +17,16 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "marker-color": "#e22828",
+        "marker-size": "medium",
+        "marker-symbol": ""
+      },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              2.378840446472168,
-              48.803839120105536
-            ],
-            [
-              2.3749351501464844,
-              48.80217141482425
-            ],
-            [
-              2.3770809173583984,
-              48.79910438831711
-            ],
-            [
-              2.383303642272949,
-              48.79945774194329
-            ],
-            [
-              2.3832178115844727,
-              48.80268021214442
-            ],
-            [
-              2.378840446472168,
-              48.803839120105536
-            ]
-          ]
+          2.3793768882751465,
+          48.801662612342525
         ]
       }
     }

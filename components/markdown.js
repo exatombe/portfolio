@@ -16,20 +16,12 @@ export default function Markdown({md}) {
     components={{
       code({node, inline, className, children, ...props}) {
         const match = /language-(\w+)/.exec(className || '')
-        console.log(JSON.parse(children))
         if(className == "language-geojson") {
-          return (
-            <div style={{ height:"100vh", width:"100%" }}>
-              <ReactGeoJSON
-                apiKey={"AIzaSyBvNZWmwIOPtCh-v36wFNJ4pK2JNPAgvbA"}
-                existingArea={JSON.parse(children)}
-                center={{ lat:48.801662612342525, lng:  2.3793768882751465 }}
-                onPolygonsDrawn={(polygons) => console.log('Available polygons', polygons)}
-                scriptLibraries="geometry"
-                zoom={13}
-                onSave={(data) => localStorage.setItem('geojson', JSON.stringify(data))}              
-              />
-            </div>
+          return (<Markdown md='
+          <div class="frames">
+          <iframe class="responsive-iframes" sandbox="allow-scripts allow-same-origin allow-top-navigation" src="/mapBox.html">
+          </iframe>
+          </div>' />
           )
         }
         return !inline && match ? (

@@ -10,17 +10,17 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
 
 *J'espère que vous me contacterez pour que l'on puisse se rencontrer en personne.*
 
-
 <div style="border-radius: 0.25rem;
     box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%); margin-top: 3rem; padding: 0.3rem; background-color:#282828;" >
     <h3 style="margin-left:15px; color:white;">
-      Languages:
+      Langages:
    </h3>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:25px; filter:invert(1); color:black;">
       <div style="align-items:center; text-align:center; ">
-         <img style="filter: revert(1); color:black;" height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/html5.svg" />
+         <img style="filter: revert(1); color:black;
+" height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/html5.svg" />
          <p style="font-size:18px; font-weight:bold;">Html5</p>
       </div>
       <div style="align-items:center; text-align:center;">
@@ -55,7 +55,8 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:25px; filter:invert(1); color:black;">
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/nextdotjs.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/nextdotjs
+.svg" />
          <p style="font-size:18px; font-weight:bold;">Next.js</p>
       </div>
       <div style="align-items:center; text-align:center;">
@@ -76,7 +77,7 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
 <div style="border-radius: 0.25rem;
     box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%); margin-top: 3rem; padding: 0.4rem; background-color:#282828;">
     <h3 style="margin-left:15px; color:white;">
-      Base de données:
+      Bases de données:
    </h3>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))

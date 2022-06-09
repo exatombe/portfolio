@@ -18,7 +18,7 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
    </h3>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
-      ; grid-gap:25px; filter:invert(1);">
+      ; grid-gap:25px; filter:invert(1); color:black;">
       <div style="align-items:center; text-align:center; ">
          <img style="filter: revert(1); color:black;" height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/html5.svg" />
          <p style="font-size:18px; font-weight:bold;">Html5</p>

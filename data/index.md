@@ -148,8 +148,8 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.3793768882751465,
-          48.801662612342525
+          FakeCoordoanate,
+          FakeCoordoanate2
         ]
       }
     }

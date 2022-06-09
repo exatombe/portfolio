@@ -10,14 +10,12 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
 
 *J'espère que vous me contacterez pour que l'on puisse se rencontrer en personne.*
 
-<div style="border-radius:15px; background-color:#00c7dd; padding:15px; margin:7px; color:white;">
-   <h2> Mes compétences </h2>
-   <blockquote>
-    <h4>
+
+<div style="border-radius: 0.25rem;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%); margin-top: 3rem; padding: 0.3rem;">
+    <h3 style="margin-left:15px">
       Languages:
-   </h4>
-</blockquote>
-<br/>
+   </h3>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:25px;">
@@ -47,13 +45,12 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
       </div>
 
    </div>
-
- <blockquote>
-    <h4>
+</div>
+<div style="border-radius: 0.25rem;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%); margin-top: 3rem; padding: 0.4rem;">
+    <h3 style="margin-left:15px">
       Framework:
-   </h4>
-</blockquote>
-<br/>
+   </h3>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:25px;">
@@ -75,12 +72,12 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
       </div>
 
    </div>
- <blockquote>
-    <h4>
+</div>
+<div style="border-radius: 0.25rem;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%); margin-top: 3rem; padding: 0.4rem;">
+    <h3 style="margin-left:15px">
       Base de données:
-   </h4>
-</blockquote>
-<br/>
+   </h3>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:20px;">
@@ -98,12 +95,12 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
       </div>
 
    </div>
- <blockquote>
-    <h4>
+</div>
+<div style="border-radius: 0.25rem;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%); margin-top: 3rem; padding: 0.4rem;">
+    <h3 style="margin-left:15px">
       Technologies:
-   </h4>
-</blockquote>
-<br/>
+   </h3>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:20px;">
@@ -135,7 +132,6 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
    </div>
 
 </div>
-
 
 ```geojson
 {

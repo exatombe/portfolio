@@ -17,6 +17,7 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
       Languages:
    </h4>
 </blockquote>
+<br/>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:25px;">
@@ -52,6 +53,7 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
       Framework:
    </h4>
 </blockquote>
+<br/>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:25px;">
@@ -78,6 +80,7 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
       Base de données:
    </h4>
 </blockquote>
+<br/>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:20px;">
@@ -100,6 +103,7 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
       Technologies:
    </h4>
 </blockquote>
+<br/>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:20px;">

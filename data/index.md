@@ -20,7 +20,7 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:25px; filter:invert(1);">
       <div style="align-items:center; text-align:center; ">
-         <img style="filter: revert(1);" height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/html5.svg" />
+         <img style="filter: revert(1); color:black;" height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/html5.svg" />
          <p style="font-size:18px; font-weight:bold;">Html5</p>
       </div>
       <div style="align-items:center; text-align:center;">
@@ -53,7 +53,7 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
    </h3>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
-      ; grid-gap:25px; filter:invert(1);">
+      ; grid-gap:25px; filter:invert(1); color:black;">
       <div style="align-items:center; text-align:center;">
          <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/nextdotjs.svg" />
          <p style="font-size:18px; font-weight:bold;">Next.js</p>
@@ -80,7 +80,7 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
    </h3>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
-      ; grid-gap:20px; filter:invert(1);">
+      ; grid-gap:20px; filter:invert(1); color:black;">
       <div style="align-items:center; text-align:center;">
          <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/mysql.svg" />
          <p style="font-size:18px; font-weight:bold;">MySQL</p>
@@ -103,7 +103,7 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
    </h3>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
-      ; grid-gap:20px; filter:invert(1);">
+      ; grid-gap:20px; filter:invert(1); color:black;">
       <div style="align-items:center; text-align:center;">
          <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/git.svg" />
          <p style="font-size:18px; font-weight:bold;">Git</p>

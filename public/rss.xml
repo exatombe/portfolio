@@ -32,5 +32,18 @@
                     <media:description>Qu'est ce que le BTS SIO ?</media:description>
                 </media:content>
             </item>
+            <item>
+                <title>Veille technologique</title>                
+                <guid isPermaLink="true">2022-06-09-veille-technologique</guid>
+                <link>https://jeremysoler.com/2022-06-09-veille-technologique</link>
+                <description>Voici ma veille technologique sur React-Native</description>
+                <pubDate>Thu, 09 Jun 2022 13:48:09 +0000</pubDate>
+                <author>Jérémy Soler</author>
+                <category>BTS SIO</category>
+                <media:content url="https://www.i2r-ingenierie.com/content/uploads/sites/44/2017/04/Veille-technologique.png" type="image/jpeg" medium="image" >
+                    <media:title>Veille technologique</media:title>
+                    <media:description>Voici ma veille technologique sur React-Native</media:description>
+                </media:content>
+            </item>
         </channel>
     </rss>

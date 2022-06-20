@@ -100,7 +100,7 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
 <div style="border-radius: 0.25rem;
     box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%); margin-top: 3rem; padding: 0.4rem; background-color:#282828;">
     <h3 style="margin-left:15px; color:white;">
-      Technologies:
+      Technologies / Outils:
    </h3>
 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
@@ -108,10 +108,6 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
       <div style="align-items:center; text-align:center;">
          <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/git.svg" />
          <p style="font-size:18px; font-weight:bold;">Git</p>
-      </div>
-      <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/github.svg" />
-         <p style="font-size:18px; font-weight:bold;">Github</p>
       </div>
       <div style="align-items:center; text-align:center;">
          <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/visualstudiocode.svg" />

@@ -6,17 +6,16 @@ import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import matter from 'frontmatter';
 import fs from 'fs';
-import dynamic from 'next/dynamic';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import config from '../config.json';
 import styles from '../styles/Home.module.css';
 import HeadComponent from '../components/head';
-const ContactForm = dynamic(() => import('../components/contactForm'), { ssr: false });
-const Timeline = dynamic(() => import('../components/timeline'), { ssr: false });
-const Markdown = dynamic(() => import('../components/markdown'), { ssr: false });
-const CardComponent = dynamic(() => import('../components/card'), { ssr: false});
-const Particles = dynamic(() => import("../components/particles"), { ssr: false });
+import ContactForm from '../components/contactForm';
+import Timeline from '../components/timeline';
+import Markdown from '../components/markdown';
+import CardComponent from '../components/card';
+import Particles from '../components/particles';
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',

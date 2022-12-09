@@ -15,6 +15,7 @@
     "@mui/icons-material": "^5.6.2",
     "@mui/lab": "^5.0.0-alpha.84",
     "@mui/material": "^5.6.2",
+    "@netlify/plugin-nextjs": "^4.29.3",
     "@next/bundle-analyzer": "^12.1.5",
     "frontmatter": "^0.0.3",
     "gray-matter": "^4.0.3",

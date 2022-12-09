@@ -8,7 +8,12 @@ const nextConfig = withBundleAnalyzer({
   images: {
     loader: 'custom',
   },
-
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback.fs = false
+    }
+    return config
+  },
 })
 
 module.exports = nextConfig

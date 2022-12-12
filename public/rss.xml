@@ -7,16 +7,16 @@
             <language>fr-FR</language>
             
             <item>
-                <title>Scan-tief</title>                
+                <title>Animaflix</title>                
                 <guid isPermaLink="true">2022-06-03-scan-tief</guid>
                 <link>https://jeremysoler.com/2022-06-03-scan-tief</link>
-                <description>Une application pour lire des scans, faite avec React-native</description>
-                <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
+                <description>Une application pour lire des manga, et regardé des animés</description>
+                <pubDate>Fri, 09 Dec 2022 15:26:46 +0000</pubDate>
                 <author>Jérémy Soler</author>
                 <category>React-native</category>
-                <media:content url="https://www.appstud.com/wp-content/uploads/2018/03/React-Native-Titre.png" type="image/jpeg" medium="image" >
-                    <media:title>Scan-tief</media:title>
-                    <media:description>Une application pour lire des scans, faite avec React-native</media:description>
+                <media:content url="files/nvoqcsk6hnhhur6zm5gzn0rggxqz_yl4rqvdd745dqb6l_eptluyfenbw5gaq2j76pe.png" type="image/jpeg" medium="image" >
+                    <media:title>Animaflix</media:title>
+                    <media:description>Une application pour lire des manga, et regardé des animés</media:description>
                 </media:content>
             </item>
             <item>

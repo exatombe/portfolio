@@ -129,26 +129,3 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
    </div>
 
 </div>
-
-```geojson
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#e22828",
-        "marker-size": "medium",
-        "marker-symbol": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          FakeCoordoanate,
-          FakeCoordoanate2
-        ]
-      }
-    }
-  ]
-}
-```

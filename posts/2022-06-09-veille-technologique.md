@@ -4,7 +4,7 @@ description: Voici ma veille technologique sur React-Native
 download: /files/présentation.pptx
 date: 2022-06-09T13:48:09.749Z
 category: BTS SIO
-thumbnail: https://www.i2r-ingenierie.com/content/uploads/sites/44/2017/04/Veille-technologique.png
+thumbnail: files/veille-technologique.jpg
 author: Jérémy Soler
 ---
 # Ma veille techno sur React-Native

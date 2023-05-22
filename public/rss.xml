@@ -7,16 +7,16 @@
             <language>fr-FR</language>
             
             <item>
-                <title>Animaflix</title>                
+                <title>GazeStream</title>                
                 <guid isPermaLink="true">2022-06-03-scan-tief</guid>
                 <link>https://jeremysoler.com/2022-06-03-scan-tief</link>
-                <description>Une application pour lire des manga, et regardé des animés</description>
-                <pubDate>Fri, 09 Dec 2022 15:26:46 +0000</pubDate>
+                <description>Un site web pour regardé des animé !</description>
+                <pubDate>Sat, 20 May 2023 23:26:38 +0000</pubDate>
                 <author>Jérémy Soler</author>
                 <category>React-native</category>
-                <media:content url="files/nvoqcsk6hnhhur6zm5gzn0rggxqz_yl4rqvdd745dqb6l_eptluyfenbw5gaq2j76pe.png" type="image/jpeg" medium="image" >
-                    <media:title>Animaflix</media:title>
-                    <media:description>Une application pour lire des manga, et regardé des animés</media:description>
+                <media:content url="https://cdn.discordapp.com/attachments/1030961739933692018/1109611748950032464/logo_gaze.png" type="image/jpeg" medium="image" >
+                    <media:title>GazeStream</media:title>
+                    <media:description>Un site web pour regardé des animé !</media:description>
                 </media:content>
             </item>
             <item>
@@ -40,7 +40,7 @@
                 <pubDate>Thu, 09 Jun 2022 13:48:09 +0000</pubDate>
                 <author>Jérémy Soler</author>
                 <category>BTS SIO</category>
-                <media:content url="https://www.i2r-ingenierie.com/content/uploads/sites/44/2017/04/Veille-technologique.png" type="image/jpeg" medium="image" >
+                <media:content url="files/veille-technologique.jpg" type="image/jpeg" medium="image" >
                     <media:title>Veille technologique</media:title>
                     <media:description>Voici ma veille technologique sur React-Native</media:description>
                 </media:content>

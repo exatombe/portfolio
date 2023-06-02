@@ -20,27 +20,27 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
       ; grid-gap:25px; filter:invert(1); color:black;">
       <div style="align-items:center; text-align:center; ">
          <img style="filter: revert(1); color:black;
-" height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/html5.svg" />
+" height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/html5.svg" alt="html"/>
          <p style="font-size:18px; font-weight:bold;">Html5</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/css3.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/css3.svg" alt="css"/>
          <p style="font-size:18px; font-weight:bold;">CSS</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/javascript.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/javascript.svg" alt="javascript" />
          <p style="font-size:18px; font-weight:bold;">Javascript</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/php.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/php.svg" alt="PHP" />
          <p style="font-size:18px; font-weight:bold;">PHP</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/python.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/python.svg" alt="Python" />
          <p style="font-size:18px; font-weight:bold;">Python</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/c.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/c.svg" alt="C" />
          <p style="font-size:18px; font-weight:bold;">C</p>
       </div>
 
@@ -56,19 +56,19 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
       ; grid-gap:25px; filter:invert(1); color:black;">
       <div style="align-items:center; text-align:center;">
          <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/nextdotjs
-.svg" />
+.svg" alt="nextjs" />
          <p style="font-size:18px; font-weight:bold;">Next.js</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/react.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/react.svg" alt="react" />
          <p style="font-size:18px; font-weight:bold;">React</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/react.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/react.svg" alt="react-native" />
          <p style="font-size:18px; font-weight:bold;">React native</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/mui.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/mui.svg" alt="material-ui"/>
          <p style="font-size:18px; font-weight:bold;">Material UI</p>
       </div>
 
@@ -83,15 +83,15 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:20px; filter:invert(1); color:black;">
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/mysql.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/mysql.svg" alt="mysql"/>
          <p style="font-size:18px; font-weight:bold;">MySQL</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/postgresql.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/postgresql.svg" alt="postgresql" />
          <p style="font-size:18px; font-weight:bold;">PostgreSql</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/firebase.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/firebase.svg" alt="firebase" />
          <p style="font-size:18px; font-weight:bold;">Firebase</p>
       </div>
 
@@ -106,23 +106,23 @@ J'ai également décidé de me lancer dans le monde du développement mobile en 
    <div style="display:grid; grid-template-columns: repeat(auto-fill,minmax(70px, max-content))
       ; grid-gap:20px; filter:invert(1); color:black;">
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/git.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/git.svg" alt="git" />
          <p style="font-size:18px; font-weight:bold;">Git</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/visualstudiocode.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/visualstudiocode.svg" alt="visualstudiocode" />
          <p style="font-size:18px; font-weight:bold;">Visual Studio Code</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/androidstudio.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/androidstudio.svg" alt="androidstudio" />
          <p style="font-size:18px; font-weight:bold;">Android Studio</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/phpstorm.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/phpstorm.svg" alt="phpstorm"/>
          <p style="font-size:18px; font-weight:bold;">PHPStorm</p>
       </div>
       <div style="align-items:center; text-align:center;">
-         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/githubactions.svg" />
+         <img height="48" width="48" src="https://unpkg.com/simple-icons@v7/icons/githubactions.svg"  alt="github action"/>
          <p style="font-size:18px; font-weight:bold;">Github Actions</p>
       </div>
 

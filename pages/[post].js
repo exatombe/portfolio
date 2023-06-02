@@ -53,7 +53,7 @@ export default function Home(props) {
     return (
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
-             <div className={styles.container} suppressHydrationWarning={true}>
+             <div className={styles.container} suppressHydrationWarning={"true"}>
                 <HeadComponent title={props.data.title} description={props.data.description} />
 
                 <main className={styles.main}>

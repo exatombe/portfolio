@@ -6,6 +6,7 @@ const nextConfig = withBundleAnalyzer({
   reactStrictMode: false,
   productionBrowserSourceMaps: true,
   images: {
+    unoptimized: true,
     domains: ['cdn.discordapp.com', 'unpkg.com'],
   },
   webpack: (config, { isServer }) => {

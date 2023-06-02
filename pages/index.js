@@ -15,7 +15,6 @@ import ContactForm from '../components/contactForm';
 import Timeline from '../components/timeline';
 import Markdown from '../components/markdown';
 import CardComponent from '../components/card';
-import Particles from '../components/particles';
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
@@ -109,9 +108,8 @@ export default function Home(props) {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <div className={styles.container} suppressHydrationWarning={true}>
+      <div className={styles.container} suppressHydrationWarning="true">
         <HeadComponent title={config['root-data'].sitename} description={config["root-data"].sitedescription} />
-         <Particles />
         <main className={styles.main} >
        
             <h1 className={styles.title}>

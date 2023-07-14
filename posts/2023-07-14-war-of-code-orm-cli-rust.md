@@ -1,6 +1,6 @@
 ---
 title: WAR OF CODE - ORM & CLI rust !
-description: Le cahier des charge du rpemier event war of code
+description: Le cahier des charge du premier event war of code
 date: 2023-07-14T21:34:10.846Z
 category: war_of_code
 thumbnail: files/woc.png

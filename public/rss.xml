@@ -20,29 +20,16 @@
                 </media:content>
             </item>
             <item>
-                <title>BTS SIO </title>                
-                <guid isPermaLink="true">2022-06-06-bts-sio</guid>
-                <link>https://jeremysoler.com/2022-06-06-bts-sio</link>
-                <description>Qu'est ce que le BTS SIO ?</description>
-                <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
-                <author>Jérémy Soler</author>
-                <category>education</category>
-                <media:content url="https://www.btsinfo.fr/wp-content/uploads/2017/10/logo-certa.png" type="image/jpeg" medium="image" >
-                    <media:title>BTS SIO </media:title>
-                    <media:description>Qu'est ce que le BTS SIO ?</media:description>
-                </media:content>
-            </item>
-            <item>
-                <title>Veille technologique</title>                
-                <guid isPermaLink="true">2022-06-09-veille-technologique</guid>
-                <link>https://jeremysoler.com/2022-06-09-veille-technologique</link>
-                <description>Voici ma veille technologique sur React-Native</description>
-                <pubDate>Thu, 09 Jun 2022 13:48:09 +0000</pubDate>
-                <author>Jérémy Soler</author>
-                <category>BTS SIO</category>
-                <media:content url="files/veille-technologique.jpg" type="image/jpeg" medium="image" >
-                    <media:title>Veille technologique</media:title>
-                    <media:description>Voici ma veille technologique sur React-Native</media:description>
+                <title>WAR OF CODE - ORM & CLI rust !</title>                
+                <guid isPermaLink="true">2023-07-14-war-of-code-orm-cli-rust</guid>
+                <link>https://jeremysoler.com/2023-07-14-war-of-code-orm-cli-rust</link>
+                <description>Le cahier des charge du premier event war of code</description>
+                <pubDate>Fri, 14 Jul 2023 21:34:10 +0000</pubDate>
+                <author>Garder500</author>
+                <category>war_of_code</category>
+                <media:content url="files/woc.png" type="image/jpeg" medium="image" >
+                    <media:title>WAR OF CODE - ORM & CLI rust !</media:title>
+                    <media:description>Le cahier des charge du premier event war of code</media:description>
                 </media:content>
             </item>
         </channel>

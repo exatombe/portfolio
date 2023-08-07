@@ -32,5 +32,18 @@
                     <media:description>Le cahier des charge du premier event war of code</media:description>
                 </media:content>
             </item>
+            <item>
+                <title>Chessy</title>                
+                <guid isPermaLink="true">2023-07-31-chessy</guid>
+                <link>https://jeremysoler.com/2023-07-31-chessy</link>
+                <description>Le meilleur jeu d'echec au monde</description>
+                <pubDate>Sat, 02 Sep 2023 13:33:51 +0000</pubDate>
+                <author>Garder500</author>
+                <category>Project</category>
+                <media:content url="files/image_2023-07-31_194232832.png" type="image/jpeg" medium="image" >
+                    <media:title>Chessy</media:title>
+                    <media:description>Le meilleur jeu d'echec au monde</media:description>
+                </media:content>
+            </item>
         </channel>
     </rss>

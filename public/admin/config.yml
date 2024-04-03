@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: exatombe/portfolio
   branch: main
 media_folder: public/files #images that are uploaded via Netlify Cms interface will be stored in this folder
 public_folder: files #I dont know

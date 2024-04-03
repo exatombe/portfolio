@@ -1,14 +1,12 @@
 ## Je me présente
 
-Je m'appelle Jérémy Soler, et j'ai 18 ans. Je suis étudiant en BTS SIO, au CFA INSTA à Paris.
+Je suis Jérémy Soler, un développeur freelance de 20 ans, également en alternance à l'école ETNA pour obtenir un Master informatique.
 
-Je suis passionné de développement depuis mes études, et j'ai décidé de me lancer dans le monde du développement web.
+Depuis mes débuts dans le développement, j'ai travaillé sur une variété de projets, de la création de sites web à la conception d'API et au développement mobile avec React Native.
 
-J'ai donc appris à me former et à développer des sites web, API, Websockets, etc.
+Je crois fermement au pouvoir de la technologie pour créer des changements positifs, et je suis toujours ouvert aux nouveaux défis et aux opportunités de collaboration.
 
-J'ai également décidé de me lancer dans le monde du développement mobile en utilisant React Native.
-
-*J'espère que vous me contacterez pour que l'on puisse se rencontrer en personne.*
+J'espère avoir l'occasion de discuter avec vous bientôt.
 
 <div style="border-radius: 0.25rem;
     box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%); margin-top: 3rem; padding: 0.3rem; background-color:#282828;" >

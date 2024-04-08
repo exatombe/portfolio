@@ -7,19 +7,6 @@
             <language>fr-FR</language>
             
             <item>
-                <title>GazeStream</title>                
-                <guid isPermaLink="true">2022-06-03-scan-tief</guid>
-                <link>https://jeremysoler.com/2022-06-03-scan-tief</link>
-                <description>Un site web pour regardé des animé !</description>
-                <pubDate>Sat, 20 May 2023 23:26:38 +0000</pubDate>
-                <author>Jérémy Soler</author>
-                <category>React-native</category>
-                <media:content url="files/gazes-avatar-color.png" type="image/jpeg" medium="image" >
-                    <media:title>GazeStream</media:title>
-                    <media:description>Un site web pour regardé des animé !</media:description>
-                </media:content>
-            </item>
-            <item>
                 <title>WAR OF CODE - ORM & CLI rust !</title>                
                 <guid isPermaLink="true">2023-07-14-war-of-code-orm-cli-rust</guid>
                 <link>https://jeremysoler.com/2023-07-14-war-of-code-orm-cli-rust</link>
@@ -30,19 +17,6 @@
                 <media:content url="files/woc.png" type="image/jpeg" medium="image" >
                     <media:title>WAR OF CODE - ORM & CLI rust !</media:title>
                     <media:description>Le cahier des charge du premier event war of code</media:description>
-                </media:content>
-            </item>
-            <item>
-                <title>Chessy</title>                
-                <guid isPermaLink="true">2023-07-31-chessy</guid>
-                <link>https://jeremysoler.com/2023-07-31-chessy</link>
-                <description>Le meilleur jeu d'echec au monde</description>
-                <pubDate>Sat, 02 Sep 2023 13:33:51 +0000</pubDate>
-                <author>Garder500</author>
-                <category>Project</category>
-                <media:content url="files/image_2023-07-31_194232832.png" type="image/jpeg" medium="image" >
-                    <media:title>Chessy</media:title>
-                    <media:description>Le meilleur jeu d'echec au monde</media:description>
                 </media:content>
             </item>
         </channel>
